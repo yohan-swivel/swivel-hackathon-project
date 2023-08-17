@@ -1,0 +1,7 @@
+.footer:hover {
+  background: linear-gradient(90deg, #89298d, #1f5da1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

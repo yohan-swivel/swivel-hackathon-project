@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_elements_theme_items",
+  "info": {
+    "displayName": "ThemeItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "themeTitle": {
+      "type": "string"
+    },
+    "themeDescription": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

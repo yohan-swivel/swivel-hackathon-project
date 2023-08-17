@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_form_feild_sets",
+  "info": {
+    "displayName": "FormFeildSet",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "feilds": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.form-feild"
+    },
+    "submitRoute": {
+      "type": "string"
+    },
+    "submitButtonLabel": {
+      "type": "string"
+    }
+  }
+}

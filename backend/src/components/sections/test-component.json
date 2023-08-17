@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_test_component_s",
+  "info": {
+    "displayName": "testComponent ",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "TestComponrnt1_1": {
+      "displayName": "Comp1",
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.comp1"
+    }
+  }
+}

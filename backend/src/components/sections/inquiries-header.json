@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_inquiries_headers",
+  "info": {
+    "displayName": "InquiriesHeader",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerText1": {
+      "type": "string"
+    },
+    "headerText2": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

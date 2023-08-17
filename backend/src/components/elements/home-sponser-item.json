@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_elements_home_sponser_items",
+  "info": {
+    "displayName": "HomeSponserItem"
+  },
+  "options": {},
+  "attributes": {
+    "sponserName": {
+      "type": "string"
+    },
+    "sponserLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

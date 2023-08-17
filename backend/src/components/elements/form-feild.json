@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_elements_form_feilds",
+  "info": {
+    "displayName": "FormFeild",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "feildName": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "text",
+        "number",
+        "email",
+        "text-area"
+      ]
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "Horizontal",
+        "Vertical"
+      ]
+    }
+  }
+}

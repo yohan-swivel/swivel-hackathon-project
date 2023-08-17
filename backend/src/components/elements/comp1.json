@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_comp1s",
+  "info": {
+    "displayName": "Comp1",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    }
+  }
+}

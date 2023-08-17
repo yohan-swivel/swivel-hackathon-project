@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_elements_association_items",
+  "info": {
+    "displayName": "AssociationItem"
+  },
+  "options": {},
+  "attributes": {
+    "associationHeading": {
+      "type": "string"
+    },
+    "associationDescription": {
+      "type": "text"
+    },
+    "associationLogo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

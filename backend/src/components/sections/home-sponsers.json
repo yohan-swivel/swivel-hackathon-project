@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_home_sponsers",
+  "info": {
+    "displayName": "HomeSponsers"
+  },
+  "options": {},
+  "attributes": {
+    "sponsors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.home-sponser-item"
+    },
+    "headerText": {
+      "type": "string"
+    }
+  }
+}

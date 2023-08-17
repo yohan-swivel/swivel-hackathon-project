@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "shortName": {
+      "type": "string"
+    },
+    "contentSection": {
+      "type": "dynamiczone",
+      "components": [
+        "sections.bottom-actions",
+        "sections.feature-columns-group",
+        "sections.feature-rows-group",
+        "sections.features",
+        "sections.heading",
+        "sections.hero",
+        "sections.home-page-about",
+        "sections.large-video",
+        "sections.lead-form",
+        "sections.pricing",
+        "sections.rich-text",
+        "sections.tech-stack",
+        "sections.test-component",
+        "sections.testimonials-group",
+        "sections.home-page-gallery",
+        "sections.home-sponsers",
+        "sections.associations",
+        "sections.count-down-timer",
+        "sections.glance",
+        "sections.team-grid",
+        "sections.faqs",
+        "sections.form-feild-set",
+        "sections.inquiries-header",
+        "sections.form-success-card",
+        "sections.theme-stack"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_tech_stack_content_lists",
+  "info": {
+    "displayName": "TechStackContentList"
+  },
+  "options": {},
+  "attributes": {
+    "contentHeader": {
+      "type": "string"
+    },
+    "contentDescription": {
+      "type": "text"
+    }
+  }
+}

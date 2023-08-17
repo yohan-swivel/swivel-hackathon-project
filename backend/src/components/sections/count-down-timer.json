@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_count_down_timers",
+  "info": {
+    "displayName": "CountDownTimer"
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "backgroundImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "endDate": {
+      "type": "datetime"
+    }
+  }
+}

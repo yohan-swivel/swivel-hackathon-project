@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_form_success_cards",
+  "info": {
+    "displayName": "FormSuccessCard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerText1": {
+      "type": "string"
+    },
+    "headerText2": {
+      "type": "string"
+    },
+    "redirectButtonText": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

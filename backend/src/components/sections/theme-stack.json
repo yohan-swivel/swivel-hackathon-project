@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_theme_stacks",
+  "info": {
+    "displayName": "ThemeStack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "themeItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.theme-item"
+    },
+    "headerDescription": {
+      "type": "text"
+    }
+  }
+}

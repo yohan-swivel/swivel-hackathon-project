@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_team_grids",
+  "info": {
+    "displayName": "TeamGrid"
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "teams": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.team-grid-item"
+    }
+  }
+}

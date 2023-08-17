@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_tech_stacks",
+  "info": {
+    "displayName": "TechStack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "techstrackMainContent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.tech-strack-main-content"
+    }
+  }
+}

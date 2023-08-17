@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_slices_bottom_actions",
+  "info": {
+    "name": "BottomActions",
+    "displayName": "Bottom actions",
+    "icon": "angle-double-right",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* background-color: #000; */
+  @apply absolute bg-bg-dark w-full mx-auto h-[7447px] text-center text-17xl text-white font-para-medium;
+}
+
+.custom-glow {
+  background: linear-gradient(45deg, #0099a0, #066aa4);
+  filter: blur(200px);
+}

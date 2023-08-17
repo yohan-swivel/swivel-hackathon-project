@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_sections_hero_containers",
+  "info": {
+    "displayName": "HeroContainer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "headerYear": {
+      "type": "string"
+    },
+    "headerDescription": {
+      "type": "string"
+    },
+    "mainBackgroundFluidmark": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subBackgroundFluidmark": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "buttonLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.button-link"
+    }
+  }
+}

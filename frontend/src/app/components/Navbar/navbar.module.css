@@ -1,0 +1,19 @@
+.navbar:hover {
+  background: linear-gradient(90deg, #89298d, #1f5da1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.selectedTab {
+  background: linear-gradient(90deg, #89298d, #1f5da1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, #89298d, #1f5da1);
+  border-image-slice: 1;
+  padding-bottom: 10px;
+}
+

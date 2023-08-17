@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_elements_tech_strack_main_contents",
+  "info": {
+    "displayName": "TechStrackMainContent"
+  },
+  "options": {},
+  "attributes": {
+    "mainHeading": {
+      "type": "string"
+    },
+    "mainDescription": {
+      "type": "text"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.tech-stack-content-list"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_home_page_abouts",
+  "info": {
+    "displayName": "homePageAbout"
+  },
+  "options": {},
+  "attributes": {
+    "aboutHeader": {
+      "type": "string"
+    },
+    "aboutDescription": {
+      "type": "text"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

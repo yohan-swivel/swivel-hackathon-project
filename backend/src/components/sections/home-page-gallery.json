@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_home_page_galleries",
+  "info": {
+    "displayName": "HomePageGallery",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "galleryItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.home-page-gallery"
+    },
+    "headerText": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sections_associations",
+  "info": {
+    "displayName": "Associations",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "associations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.association-item"
+    },
+    "headerText": {
+      "type": "string"
+    }
+  }
+}
