@@ -3,13 +3,16 @@ import React, { useEffect, useState } from "react";
 import Countdown from "react-countdown";
 
 interface CountDownProps {
-  countDownText: string;
   countDownTime: string | number | Date;
   completedText: string;
 }
 
-const CountDownCard: React.FC = () => {
+const CountDownCard: React.FC<CountDownProps> = (props) => {
   const [hydrated, setHydrated] = useState(false);
+  const [timerCompleted, setTimerCompleted] = useState(false);
+
+  console.log(props);
+
 
   useEffect(() => {
     setHydrated(true);
@@ -18,10 +21,11 @@ const CountDownCard: React.FC = () => {
     return null;
   }
 
+  
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
-      // take from backend
-      return <> Its today</>;
+      setTimerCompleted(completed);
+      return <>{props.completedText}</>;
     } else {
       return (
         <span>
@@ -39,13 +43,15 @@ const CountDownCard: React.FC = () => {
           alt=""
           src="/ritimeline.svg"
         />
-        <div className="relative">Stats In</div>
+        <div className="relative">
+          {timerCompleted ? <></> : <>Starts In</>}
+        </div>
       </div>
       <div className="self-stretch relative box-border h-px border-t-[1px] border-solid border-gray-200" />
       <div className="flex flex-row items-center justify-center text-5xl">
         <div className="relative">
           <Countdown
-            date={new Date("2023-09-15T00:00:00")}
+            date={new Date(props.countDownTime)}
             renderer={renderer}
           />
         </div>

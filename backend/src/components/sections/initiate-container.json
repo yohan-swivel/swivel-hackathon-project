@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_initiate_containers",
+  "info": {
+    "displayName": "InitiateContainer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "countdownDateTime": {
+      "type": "datetime"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "commencement": {
+      "type": "string"
+    },
+    "countdownCompletedMessage": {
+      "type": "string"
+    }
+  }
+}
