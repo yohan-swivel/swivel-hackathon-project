@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_elements_glance_stacks",
+  "info": {
+    "displayName": "GlanceStack"
+  },
+  "options": {},
+  "attributes": {
+    "glanceStackHeading": {
+      "type": "string"
+    },
+    "glanceStackItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.glance-stack-item"
+    }
+  }
+}

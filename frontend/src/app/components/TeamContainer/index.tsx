@@ -1,9 +1,16 @@
+"use client";
 import HeaderText from "../HeaderText";
-import TeamGrid from "../TeamGrid";
+import TeamGrid, { TeamsGridProps } from "../TeamGrid";
 
-interface TeamContainerProps {}
+interface TeamContainerProps {
+  id: number;
+  __component: string;
+  headerText: string;
+  headerDescription: string;
+  teams: Array<TeamsGridProps>;
+}
 
-const TeamContainer: React.FC = () => {
+const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
   return (
     <>
       <section
@@ -11,12 +18,13 @@ const TeamContainer: React.FC = () => {
         data-scroll-to="ourTeamContainer"
       >
         <HeaderText
-          headerText="Meet Our Team"
-          headerDescription="Swivel Group is guided and driven by the energy, innovation, and desire
-                             to make a difference, that our talented and globally recognised
-                             leadership team brings to the company from their diverse experiences.."
+          headerText={data.headerText}
+          headerDescription={data.headerDescription}
         />
-        <TeamGrid />
+        {data.teams &&
+          data.teams.map((team: TeamsGridProps, index: number) => (
+            <TeamGrid key={index} {...team} />
+          ))}
       </section>
     </>
   );

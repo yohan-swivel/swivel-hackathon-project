@@ -8,6 +8,9 @@
     "headerText": {
       "type": "string"
     },
+    "headerDescription": {
+      "type": "text"
+    },
     "teams": {
       "type": "component",
       "repeatable": true,

@@ -1,3 +1,4 @@
+"use client";
 import CountDownCard from "../CountDownCard";
 import VenueCard from "../VenueCard";
 import DateCard from "../DateCard";

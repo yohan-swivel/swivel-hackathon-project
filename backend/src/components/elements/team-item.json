@@ -20,11 +20,6 @@
       ],
       "type": "media",
       "multiple": false
-    },
-    "socialLinks": {
-      "type": "component",
-      "repeatable": true,
-      "component": "links.social-link"
     }
   }
 }

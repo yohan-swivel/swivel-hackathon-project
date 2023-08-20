@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_elements_glance_stack_items",
+  "info": {
+    "displayName": "GlanceStackItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string"
+    },
+    "sectionDescription": {
+      "type": "text"
+    }
+  }
+}

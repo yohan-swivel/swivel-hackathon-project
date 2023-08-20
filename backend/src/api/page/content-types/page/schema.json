@@ -44,7 +44,8 @@
         "sections.form-success-card",
         "sections.theme-stack",
         "sections.hero-container",
-        "sections.initiate-container"
+        "sections.initiate-container",
+        "sections.glance-container"
       ]
     },
     "slug": {

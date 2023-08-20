@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_glance_containers",
+  "info": {
+    "displayName": "GlanceContainer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "headerDescription": {
+      "type": "text"
+    },
+    "dataScrollTo": {
+      "type": "string"
+    },
+    "glanceStack": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.glance-stack"
+    }
+  }
+}

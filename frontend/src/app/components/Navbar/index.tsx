@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
   return (
     <>
-      <div className="fixed top-[0px] right-[0px] [background:linear-gradient(90deg,_#15141a,_#111516_12.36%,_#111819_23.28%,_#11191b_34.69%,_#13161b_52.4%,_#15151b_68.54%,_#131213)] w-[100%] h-[101px] flex flex-row py-0 px-16 box-border items-center justify-between text-left text-base text-whitesmoke font-para-medium">
+      <div className="absolute top-[0px] right-[0px] [background:linear-gradient(90deg,_#15141a,_#111516_12.36%,_#111819_23.28%,_#11191b_34.69%,_#13161b_52.4%,_#15151b_68.54%,_#131213)] w-[100%] h-[101px] flex flex-row py-0 px-16 box-border items-center justify-between text-left text-base text-whitesmoke font-para-medium">
         <div className="w-[247px] overflow-hidden shrink-0 flex flex-col items-start justify-start">
           <img
             className="relative w-[121px] h-[66px] object-cover"
