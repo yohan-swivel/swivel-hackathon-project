@@ -60,7 +60,7 @@ const Theme2Container: NextPage = () => {
           AI. 
         </div>
       </div>
-      <div className="self-stretch flex-1 bg-glass-bg flex flex-col p-8 items-start justify-start gap-[32px]">
+      {/* <div className="self-stretch flex-1 bg-glass-bg flex flex-col p-8 items-start justify-start gap-[32px]">
         <img
           className="relative w-[67px] h-[67px] overflow-hidden shrink-0"
           alt=""
@@ -79,7 +79,7 @@ const Theme2Container: NextPage = () => {
           visualization tools, or constructing frameworks for live data analysis
           and reporting.
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

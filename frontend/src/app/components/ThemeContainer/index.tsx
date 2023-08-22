@@ -1,20 +1,32 @@
+"use client";
 import HeaderText from "../HeaderText";
+import ThemeItem, { ThemeItemProps } from "../ThemeItem";
 
-interface ThemeContainerProps {}
+interface ThemeContainerProps {
+  id: number;
+  __component: string;
+  headerText: string;
+  headerDescription: string;
+  themeItems: Array<ThemeItemProps>;
+  dataScrollTo: string;
+}
 
-const ThemeContainer: React.FC = () => {
+const ThemeContainer: React.FC<{ data: ThemeContainerProps }> = ({ data }) => {
   return (
     <>
-      {" "}
       <section
         className="absolute top-[3251px]  w-[100%] flex flex-col items-center justify-center gap-[48px]"
-        data-scroll-to="themesContainer"
+        data-scroll-to={data.dataScrollTo}
       >
-        <HeaderText headerText="SwivelHack Themes" />
-        <div className="relative text-lg inline-block w-[1067px]">{`Lorem ipsum dolor sit amet consectetur. Id dui pellentesque velit tincidunt rhoncus id dictum nibh suscipit. Et pretium odio in diam odio vitae aliquam. Dictumst a vitae cursus quis odio malesuada aliquet justo. Tortor velit `}</div>
-        <div className="w-[1330px] flex flex-col items-start justify-start gap-[32px]">
-          {/* <ThemeContainer /> */}
-          {/* <Theme2Container /> */}
+        <HeaderText
+          headerText={data.headerText}
+          headerDescription={data.headerDescription}
+        />
+        <div className="self-stretch grid grid-cols-3 px-12 items-start justify-start gap-[32px] text-left text-5xl text-white font-para-medium">
+          {data.themeItems &&
+            data.themeItems.map((themeItem: ThemeItemProps, index: number) => (
+              <ThemeItem {...themeItem} key={index} />
+            ))}
         </div>
       </section>
     </>

@@ -13,15 +13,13 @@ const GlanceStack: React.FC<GlanceStackProps> = (props) => {
         <div className="self-stretch flex flex-row items-center justify-center">
           <b className="relative">{props.glanceStackHeading}</b>
         </div>
-        <div className="self-stretch flex flex-col items-start justify-center gap-[20px] px-20">
-          <div className="self-stretch flex flex-row items-center w-[100%]  gap-[30px] ">
-            {props.glanceStackItems &&
-              props.glanceStackItems.map(
-                (stackItem: GlanceStackItemProps, index: number) => (
-                  <GlanceStackItem key={index} {...stackItem} />
-                )
-              )}
-          </div>
+        <div className="self-stretch grid grid-cols-2 px-10 items-center gap-[30px] ">
+          {props.glanceStackItems &&
+            props.glanceStackItems.map(
+              (stackItem: GlanceStackItemProps, index: number) => (
+                <GlanceStackItem key={index} {...stackItem} />
+              )
+            )}
         </div>
       </div>
     </>

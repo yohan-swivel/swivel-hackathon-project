@@ -8,6 +8,7 @@ interface TeamContainerProps {
   headerText: string;
   headerDescription: string;
   teams: Array<TeamsGridProps>;
+  dataScrollTo: string;
 }
 
 const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
@@ -15,7 +16,7 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
     <>
       <section
         className="absolute top-[1991px] w-[100%] flex flex-col items-center justify-center gap-[48px] text-center text-lg text-white font-para-medium"
-        data-scroll-to="ourTeamContainer"
+        data-scroll-to={data.dataScrollTo}
       >
         <HeaderText
           headerText={data.headerText}

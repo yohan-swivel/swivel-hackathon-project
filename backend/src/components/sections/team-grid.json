@@ -11,6 +11,9 @@
     "headerDescription": {
       "type": "text"
     },
+    "dataScrollTo": {
+      "type": "string"
+    },
     "teams": {
       "type": "component",
       "repeatable": true,

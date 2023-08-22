@@ -20,11 +20,9 @@ const TeamGridItem: React.FC<TeamGridItemProps> = (props) => {
           alt={props.memberImage.data.attributes.alternativeText}
           src={memberImageUrl}
         />
-        <div className="self-stretch flex flex-row items-end justify-between">
-          <div className="flex flex-col items-center justify-center gap-[8px]">
-            <b className="relative">{props.memberName}</b>
-            <div className="relative text-mini">{props.memberDesignation}</div>
-          </div>
+        <div>
+          <b>{props.memberName}</b>
+          <div className="text-mini mt-2">{props.memberDesignation}</div>
         </div>
       </div>
     </>
