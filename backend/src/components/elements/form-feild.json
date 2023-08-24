@@ -21,7 +21,8 @@
         "text",
         "number",
         "email",
-        "text-area"
+        "text-area",
+        "phone"
       ]
     },
     "position": {
@@ -30,6 +31,9 @@
         "Horizontal",
         "Vertical"
       ]
+    },
+    "label": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_address_items",
+  "info": {
+    "displayName": "addressItem"
+  },
+  "options": {},
+  "attributes": {
+    "country": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    }
+  }
+}

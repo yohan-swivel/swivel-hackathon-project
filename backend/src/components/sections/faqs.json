@@ -14,8 +14,8 @@
       "repeatable": true,
       "component": "elements.faq-item"
     },
-    "headerDescription": {
-      "type": "text"
+    "dataScrollTo": {
+      "type": "string"
     }
   }
 }

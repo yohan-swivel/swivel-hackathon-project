@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_contact_us_containers",
+  "info": {
+    "displayName": "ContactUsContainer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "dataScrollTo": {
+      "type": "string"
+    },
+    "mainHeaderText": {
+      "type": "string"
+    },
+    "subHeaderText": {
+      "type": "string"
+    },
+    "contactUsForm": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.form-feild-set"
+    },
+    "contactUsCard": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.contact-us-card"
+    }
+  }
+}

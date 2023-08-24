@@ -59,12 +59,7 @@ export default async function RootLayout({
   const global = await getGlobal();
   const navbarData: NavbarProps = global.data.attributes.navbar;
   const footerData: FooterProps = global.data.attributes.footer;
-  // // TODO: CREATE A CUSTOM ERROR PAGE
-  // if (!global.data) return null;
-
-  // const { notificationBanner, navbar, footer, socialsBar } =
-  //   global.data.attributes;
-
+ 
   // const navbarLogoUrl = getStrapiMedia(
   //   navbar.navbarLogo.logoImg.data.attributes.url
   // );

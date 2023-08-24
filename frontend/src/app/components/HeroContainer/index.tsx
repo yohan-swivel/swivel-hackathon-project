@@ -4,6 +4,7 @@ import BottemScrollButton from "../BottemScrollButton";
 import GlitterButton from "../GlitterButton";
 import { Logo, LogoItem, NavbarLink } from "../Navbar";
 import { useCallback } from "react";
+import styles from "./herocontainer.module.css";
 
 export interface ButtonLink {
   id: number;
@@ -30,16 +31,22 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
   const mainBackgroundFluidmark: any = getStrapiMedia(
     data.mainBackgroundFluidmark.data.attributes.url
   );
+  const subBackgroundFluidmark1: any = getStrapiMedia(
+    data.subBackgroundFluidmark.data[0].attributes.url
+  );
+  const subBackgroundFluidmark2: any = getStrapiMedia(
+    data.subBackgroundFluidmark.data[1].attributes.url
+  );
   return (
-    <>
-      <div className="custom-glow left-0 right-0 absolute top-48 mx-auto w-[600px] h-[600px] opacity-10"></div>
+    <div>
+      <div className="custom-glow left-0 right-0 absolute top-48 mx-auto w-[600px] h-[600px] opacity-10" />
       <img
         className="absolute top-[140px] mx-auto	right-[0px] left-[0px] w-[530px] h-[574px] object-cover"
         alt={data.mainBackgroundFluidmark.data.attributes.alternativeText}
         src={mainBackgroundFluidmark}
       />
       <section
-        className="absolute top-[276px] left-[0px] right-[0px] mx-auto flex flex-col items-center justify-start gap-[64px]"
+        className="absolute top-[276px] left-[0px] right-[0px] mx-auto flex flex-col items-center justify-start"
         data-scroll-to={data.dataScrollTo}
       >
         <div className="flex flex-col items-center justify-start">
@@ -50,7 +57,12 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
                   {data.headerText}
                 </b>
               </div>
-              <b className="relative tracking-[0.11em]">{data.headerYear}</b>
+              {/* <div className={styles.stroketextcontainer}>
+                <h1 className={styles.stroketext}>Your Stroke Text</h1>
+              </div> */}
+              <b className={`relative tracking-[0.11em]`}>
+                {data.headerYear}
+              </b>
             </div>
             <div className="relative text-xl leading-[26px] font-semibold">
               {data.headerDescription}
@@ -65,6 +77,28 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
             />
           </div>
         </div>
+
+        <div className="flex justify-between w-[1330px]">
+          <div>
+            <img
+              className="opacity-[0.7]"
+              alt={
+                data.subBackgroundFluidmark.data[0].attributes.alternativeText
+              }
+              src={subBackgroundFluidmark1}
+            />
+          </div>
+          <div>
+            <img
+              className="opacity-[0.7]"
+              alt={
+                data.subBackgroundFluidmark.data[1].attributes.alternativeText
+              }
+              src={subBackgroundFluidmark2}
+            />
+          </div>
+        </div>
+
         <BottemScrollButton
           onClick={() =>
             useCallback(() => {
@@ -78,7 +112,7 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
           }
         />
       </section>
-    </>
+    </div>
   );
 };
 

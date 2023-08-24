@@ -4,6 +4,8 @@ import GlanceContainer from "../components/GlanceContainer";
 import TeamContainer from "../components/TeamContainer";
 import ThemeContainer from "../components/ThemeContainer";
 import SponsersContainer from "../components/SponsersContainer";
+import FaqContainer from "../components/FaqContainer";
+import ContactUsContainer from "../components/ContactUsContainer";
 
 export function sectionRenderer(section: any, index: number) {
   switch (section.__component) {
@@ -19,6 +21,10 @@ export function sectionRenderer(section: any, index: number) {
       return <ThemeContainer key={index} data={section} />;
     case "sections.home-sponsers":
       return <SponsersContainer key={index} data={section} />;
+    case "sections.faqs":
+      return <FaqContainer key={index} data={section} />;
+    case "sections.contact-us-container":
+      return <ContactUsContainer key={index} data={section} />;
     default:
       return null;
   }

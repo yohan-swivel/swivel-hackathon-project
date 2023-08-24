@@ -45,7 +45,9 @@
         "sections.theme-stack",
         "sections.hero-container",
         "sections.initiate-container",
-        "sections.glance-container"
+        "sections.glance-container",
+        "sections.contact-us-container",
+        "elements.contact-us-card"
       ]
     },
     "slug": {

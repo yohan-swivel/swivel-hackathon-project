@@ -4,7 +4,8 @@
   "info": {
     "singularName": "inquiry",
     "pluralName": "inquiries",
-    "displayName": "Inquiry"
+    "displayName": "Inquiry",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,6 +28,9 @@
     "message": {
       "type": "text",
       "required": true
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
