@@ -18,6 +18,9 @@ const TeamGrid: React.FC<TeamsGridProps> = (props) => {
             ))}
         </div>
       </div>
+      <div className="absolute top-[650px] w-[100%]">
+        <div className="custom-glow float-left  w-[250px] h-[250px] opacity-20" />
+      </div>
     </>
   );
 };

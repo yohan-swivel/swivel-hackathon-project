@@ -18,9 +18,13 @@ const GlanceStack: React.FC<GlanceStackProps> = (props) => {
             props.glanceStackItems.map(
               (stackItem: GlanceStackItemProps, index: number) => (
                 <GlanceStackItem key={index} {...stackItem} />
+               
               )
             )}
         </div>
+      </div>
+      <div className="absolute top-[1550px]  w-[100%]">
+        <div className="custom-glow float-right  w-[300px] h-[300px] opacity-30" />
       </div>
     </>
   );

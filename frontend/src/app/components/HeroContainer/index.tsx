@@ -4,7 +4,6 @@ import BottemScrollButton from "../BottemScrollButton";
 import GlitterButton from "../GlitterButton";
 import { Logo, LogoItem, NavbarLink } from "../Navbar";
 import { useCallback } from "react";
-import styles from "./herocontainer.module.css";
 
 export interface ButtonLink {
   id: number;

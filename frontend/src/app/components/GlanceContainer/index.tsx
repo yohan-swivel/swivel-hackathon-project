@@ -20,6 +20,7 @@ const GlanceContainer: React.FC<{ data: GlanceContainerProps }> = ({
         className="absolute top-[1063px] w-[100%] flex flex-col p-2.5 box-border items-center justify-center gap-[48px]"
         data-scroll-to={data.dataScrollTo}
       >
+
         <HeaderText
           headerDescription={data.headerDescription}
           headerText={data.headerText}
