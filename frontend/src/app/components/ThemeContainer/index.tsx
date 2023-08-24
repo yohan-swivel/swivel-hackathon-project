@@ -15,7 +15,7 @@ const ThemeContainer: React.FC<{ data: ThemeContainerProps }> = ({ data }) => {
   return (
     <>
       <section
-        className="absolute top-[3251px]  w-[100%] flex flex-col items-center justify-center gap-[48px]"
+        className=" flex flex-col items-center justify-center gap-[48px]"
         data-scroll-to={data.dataScrollTo}
       >
         <HeaderText

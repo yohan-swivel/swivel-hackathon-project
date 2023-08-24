@@ -63,7 +63,7 @@ export default async function RootLayout({
     <html>
       <body>
         <Navbar {...navbarData} />
-        <main style={{ overflowY: "hidden" }}>{children}</main>
+        <main className="container mx-auto overflow-hidden space-y-8">{children}</main>
         <Footer {...footerData} />
       </body>
     </html>

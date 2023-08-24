@@ -37,7 +37,7 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
     data.subBackgroundFluidmark.data[1].attributes.url
   );
   return (
-    <div>
+    <div className="flex min-h-[841px] relative">
       <div className="custom-glow left-0 right-0 absolute top-48 mx-auto w-[600px] h-[600px] opacity-10" />
       <img
         className="absolute top-[140px] mx-auto	right-[0px] left-[0px] w-[530px] h-[574px] object-cover"

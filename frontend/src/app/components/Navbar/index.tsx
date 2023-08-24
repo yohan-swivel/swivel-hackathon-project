@@ -64,17 +64,17 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     []
   );
 
-  return (
+  return ( 
     <>
-      <div className="fixed z-40 top-[0px] right-[0px] [background:linear-gradient(90deg,_#15141a,_#111516_12.36%,_#111819_23.28%,_#11191b_34.69%,_#13161b_52.4%,_#15151b_68.54%,_#131213)] w-[100%] h-[101px] flex flex-row py-0 px-16 box-border items-center justify-between text-left text-base text-whitesmoke font-para-medium">
-        <div className="w-[247px] overflow-hidden shrink-0 flex flex-col items-start justify-start">
+      <div className="fixed z-40 top-[0px] right-[0px] overflow-hidden w-full  [background:linear-gradient(90deg,_#15141a,_#111516_12.36%,_#111819_23.28%,_#11191b_34.69%,_#13161b_52.4%,_#15151b_68.54%,_#131213)] h-[101px] flex flex-row py-0 px-16 box-border items-center justify-between text-left text-base text-whitesmoke font-para-medium">
+        <div className="sm:max-w-[247px] overflow-hidden shrink-0 flex flex-col items-start justify-start">
           <img
-            className="relative w-[121px] h-[66px] object-cover"
+            className="relative max-w-[121px] object-cover"
             alt={props.navbarLogo.logoImg.data.attributes.alternativeText}
             src={navbarLogoUrl}
           />
         </div>
-        <div className="flex flex-row items-start justify-start gap-[32px]">
+        <div className="md:flex hidden md:flex-row items-start justify-start gap-2">
           {props.links &&
             props.links.map((link: NavbarLink) => {
               return (

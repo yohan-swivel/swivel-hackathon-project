@@ -14,7 +14,7 @@ const TeamGridItem: React.FC<TeamGridItemProps> = (props) => {
   );
   return (
     <>
-      <div className="bg-glass-bg w-[316px] h-[387px] flex flex-col p-8 box-border items-center justify-center gap-[32px] text-lg text-white font-para-medium">
+      <div className="bg-glass-bg max-w-[316px] flex flex-col p-8 box-border items-center justify-center gap-[32px] text-lg text-white font-para-medium">
         <img
           className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover"
           alt={props.memberImage.data.attributes.alternativeText}
