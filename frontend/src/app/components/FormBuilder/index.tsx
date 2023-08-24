@@ -59,12 +59,11 @@ const Feild: React.FC<FeildType> = (props) => {
       case "text-area":
         return (
           <textarea
-            className="self-stretch border-none bg-glass-bg w-[1330px] h-[110px] flex flex-row py-2.5 px-4 box-border items-center justify-start text-base text-gray-200"
+            className=" border-none bg-glass-bg h-[110px] w-[1320px] box-border  text-base text-gray-200"
             placeholder={props.placeholder}
             name={props.feildName}
             required={props.required}
           />
-       
         );
       case "phone":
         return (
@@ -148,7 +147,13 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
 
   return (
     <>
-      <Toaster/>
+      <Toaster
+        toastOptions={{
+          style: {
+            fontSize: 16,
+          },
+        }}
+      />
       <div className="flex flex-col items-start justify-start gap-[32px]">
         <div className="flex flex-row items-center justify-center">
           <b className="relative tracking-[0.03em]">{props.subHeaderText}</b>
@@ -164,10 +169,9 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
             buttonText={props.submitButtonLabel}
             iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
             style={{
-              width: '100%',
+              width: "100%",
               height: "60%",
-              marginTop:50
-  
+              marginTop: 50,
             }}
             type="submit"
           />

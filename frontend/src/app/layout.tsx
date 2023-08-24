@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
+import { getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
 import { FALLBACK_SEO } from "./utils/constants";
-import MainShadowLayer from "./components/MainShadowLayer";
 import Navbar, { NavbarProps } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { FooterProps } from "./components/Footer";
@@ -59,20 +58,12 @@ export default async function RootLayout({
   const global = await getGlobal();
   const navbarData: NavbarProps = global.data.attributes.navbar;
   const footerData: FooterProps = global.data.attributes.footer;
- 
-  // const navbarLogoUrl = getStrapiMedia(
-  //   navbar.navbarLogo.logoImg.data.attributes.url
-  // );
-
-  // const footerLogoUrl = getStrapiMedia(
-  //   footer.footerLogo.logoImg.data.attributes.url
-  // );
 
   return (
     <html>
       <body>
         <Navbar {...navbarData} />
-        <main>{children}</main>
+        <main style={{ overflowY: "hidden" }}>{children}</main>
         <Footer {...footerData} />
       </body>
     </html>

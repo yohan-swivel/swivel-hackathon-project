@@ -21,10 +21,10 @@ const SponsersContainer: React.FC<{ data: SponsersContainerProps }> = ({
 }) => {
   return (
     <>
-      <div className="absolute top-[4143px] mx-auto w-[100%] flex flex-col p-2.5 items-center justify-center gap-[48px]">
+      <div className="absolute top-[4143px] mx-auto w-[100%] flex flex-col  items-center justify-center gap-[48px]">
         <div className="custom-glow flex flex-row justify-center items-center  w-[250px] h-[250px] opacity-40" />
       </div>
-      <div className="absolute top-[4443px] mx-auto w-[100%] flex flex-col p-2.5 items-center justify-center gap-[48px]">
+      <div className="absolute top-[4443px] mx-auto w-[100%] flex flex-col  items-center justify-center gap-[48px]">
         <HeaderText headerText={data.headerText} />
         <div className="flex flex-row items-center justify-center gap-[50px]">
           {data.sponsors &&
