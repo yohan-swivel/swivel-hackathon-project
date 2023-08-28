@@ -49,15 +49,15 @@ const Footer: React.FC<FooterProps> = (props) => {
   return (
     <>
     
-      <div className="absolute bottom-[47px] left-0 right-0 m-auto w-[98%] flex flex-col items-center justify-start text-left text-base text-whitesmoke font-para-medium">
+      <div className="mx-auto flex flex-col w-full items-center justify-start text-left text-base text-whitesmoke font-para-medium">
       <div className="custom-glow left-0 right-0 mx-auto w-[180px] h-[180px] opacity-50"></div>
-        <div className="box-border w-[100%] flex flex-row pt-0 px-0 pb-10 items-center justify-between border-b-[1px] ">
+        <div className="box-border flex flex-row pt-0 px-0 pb-10 items-center justify-between border-b-[1px] space-x-6 ">
           <img
             className="relative w-[121px] h-[66.4px] object-cover"
             alt={props.footerLogo.data.attributes.alternativeText}
             src={footerLogoUrl}
           />
-          <div className="flex flex-row items-start justify-start gap-[32px]">
+          <div className="lg:flex hidden flex-row items-start justify-start gap-[32px]">
             {props.navLinks &&
               props.navLinks.map((link: NavbarLink) => (
                 <>

@@ -18,7 +18,7 @@ const ContactUsContainer: React.FC<{ data: ContactUsContainerProps }> = ({
   return (
     <>
       <div
-        className="absolute top-[5837px] w-[100%] flex flex-col items-center justify-start gap-[80px] text-center text-17xl text-white font-para-medium"
+        className="w-[100%] flex flex-col items-center justify-start gap-[80px] text-center text-17xl text-white font-para-medium"
         data-scroll-to={data.dataScrollTo}
       >
         <HeaderText headerText={data.mainHeaderText} />

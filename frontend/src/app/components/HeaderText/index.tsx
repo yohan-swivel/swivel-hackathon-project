@@ -12,7 +12,7 @@ const HeaderText: React.FC<HeaderTextProps> = (props) => {
       {_.isEmpty(props.headerDescription) ? (
         <></>
       ) : (
-        <div className="relative text-lg inline-block w-[1067px] text-center">
+        <div className="relative text-lg inline-block text-center">
           {props.headerDescription}
         </div>
       )}

@@ -57,7 +57,7 @@ const FaqContainer: React.FC<{ data: FaqContainerProps }> = ({ data }) => {
   return (
     <>
       <div
-        className="absolute top-[4715px] px-20 w-[100%] flex flex-col py-2.5 box-border items-center justify-center gap-[20px]"
+        className="px-20 flex flex-col py-2.5 box-border items-center justify-center gap-[20px]"
         data-scroll-to={data.dataScrollTo}
       >
         <div className="pb-10">
