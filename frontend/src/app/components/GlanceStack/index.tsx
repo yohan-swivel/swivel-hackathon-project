@@ -9,7 +9,7 @@ export interface GlanceStackProps {
 const GlanceStack: React.FC<GlanceStackProps> = (props) => {
   return (
     <>
-      <div className="absolute top-[1321px]  w-[100%] flex flex-col py-2.5 px-0 box-border items-start justify-center gap-[48px]">
+      <div className=" flex flex-col py-2.5 px-0 box-border items-start justify-center gap-[48px]">
         <div className="self-stretch flex flex-row items-center justify-center">
           <b className="relative">{props.glanceStackHeading}</b>
         </div>
@@ -23,9 +23,9 @@ const GlanceStack: React.FC<GlanceStackProps> = (props) => {
             )}
         </div>
       </div>
-      <div className="absolute top-[1550px]  w-[100%]">
+      {/* <div className=" w-[100%]">
         <div className="custom-glow float-right  w-[300px] h-[300px] opacity-30" />
-      </div>
+      </div> */}
     </>
   );
 };
