@@ -11,8 +11,7 @@ const CountDownCard: React.FC<CountDownProps> = (props) => {
   const [hydrated, setHydrated] = useState(false);
   const [timerCompleted, setTimerCompleted] = useState(false);
 
-  console.log(props);
-
+  
 
   useEffect(() => {
     setHydrated(true);
@@ -43,7 +42,7 @@ const CountDownCard: React.FC<CountDownProps> = (props) => {
           alt=""
           src="/ritimeline.svg"
         />
-        <div className="relative">
+        <div>
           {timerCompleted ? <></> : <>Starts In</>}
         </div>
       </div>

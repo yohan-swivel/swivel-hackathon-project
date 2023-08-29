@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             Menu
           </div>
           <ul
-            className={`md:flex md:items-center md:pb-0 pb-10 absolute bg-black md:bg-transparent md:static md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+            className={`md:flex md:items-center mt-14 md:mt-5 md:pb-0 pb-10 absolute justify-end bg-black md:bg-transparent md:static md:z-auto z-[-1] left-0 w-full  md:pl-0 pl-9 transition-all duration-500 ease-in ${
               isOpen ? "top-20" : "top-[-490px]"
             }`}
           >
@@ -105,20 +105,22 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                   </>
                 );
               })}
-            <GlitterButton
-              buttonText={props.button.text}
-              iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-              onClick={() => {}}
-              style={{ width: 247, height: 44, position: "unset" }}
-              type="button"
-              className="py-2 px-6 md:invisible"
-            />
+            <div className="flex flex-row flex-wrap content-center justify-center">
+              <GlitterButton
+                buttonText={props.button.text}
+                iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
+                onClick={() => {}}
+                style={{ width: 247, height: 44 }}
+                type="button"
+                className="py-2  md:invisible"
+              />
+            </div>
           </ul>
           <GlitterButton
             buttonText={props.button.text}
             iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
             onClick={() => {}}
-            style={{ width: 247, height: 44, position: "unset" }}
+            style={{ width: 247, height: 44 }}
             type="button"
             className="py-2 px-6 rounded invisible md:visible"
           />

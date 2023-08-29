@@ -32,7 +32,7 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
   return (
     <>
       <section
-        className="flex flex-col items-center justify-center gap-[48px] text-center text-lg text-white font-para-medium"
+        className="flex flex-col items-center justify-center gap-[48px] text-center text-lg text-white font-para-medium px-16"
         data-scroll-to={data.dataScrollTo}
       >
         <HeaderText
