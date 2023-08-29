@@ -64,7 +64,7 @@ export default async function RootLayout({
       <body>
         <Navbar {...navbarData} />
         <main className="container mx-auto overflow-hidden space-y-8">{children}</main>
-        <Footer {...footerData} />
+        {/* <Footer {...footerData} /> */}
       </body>
     </html>
   );

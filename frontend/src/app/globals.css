@@ -4,8 +4,7 @@
 @tailwind utilities;
 
 body {
-  /* background-color: #000; */
-  @apply absolute bg-bg-dark w-full mx-auto h-[7447px] text-center text-17xl text-white font-para-medium;
+  @apply bg-bg-dark text-center text-17xl text-white font-para-medium;
 }
 
 .custom-glow {
