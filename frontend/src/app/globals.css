@@ -11,3 +11,7 @@ body {
   background: linear-gradient(45deg, #0099a0, #066aa4);
   filter: blur(200px);
 }
+
+.country  {
+  @apply  hover:bg-slate-600 !important
+}

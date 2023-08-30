@@ -6,6 +6,8 @@ import { FALLBACK_SEO } from "./utils/constants";
 import Navbar, { NavbarProps } from "./components/Navbar";
 import Footer from "./components/Footer";
 import { FooterProps } from "./components/Footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 async function getGlobal(): Promise<any> {
   const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
@@ -62,9 +64,13 @@ export default async function RootLayout({
   return (
     <html>
       <body>
-        <Navbar {...navbarData} />
-        <main className="container mx-auto overflow-hidden space-y-8">{children}</main>
-        {/* <Footer {...footerData} /> */}
+        <Suspense fallback={<Loading />}>
+          <Navbar {...navbarData} />
+          <main className="container mx-auto overflow-hidden space-y-8">
+            {children}
+          </main>
+          <Footer {...footerData} />
+        </Suspense>
       </body>
     </html>
   );

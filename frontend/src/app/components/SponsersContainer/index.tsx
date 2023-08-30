@@ -21,25 +21,25 @@ const SponsersContainer: React.FC<{ data: SponsersContainerProps }> = ({
 }) => {
   return (
     <>
-      <div className="mx-auto flex flex-col  items-center justify-center gap-[48px]">
-        <div className="custom-glow flex flex-row justify-center items-center  w-[250px] h-[250px] opacity-40" />
+      <div className=" flex justify-center items-center">
+        <div className="custom-glow flex flex-row justify-center items-center w-[125px] h-[125px] opacity-100" />
       </div>
-      <div className="mx-auto flex flex-col  items-center justify-center gap-[48px]">
+      <div className="mx-16 !mt-[-100px]">
         <HeaderText headerText={data.headerText} />
-        <div className="flex flex-row items-center justify-center gap-[50px]">
-          {data.sponsors &&
-            data.sponsors.map((sponsor: SponsersType) => {
-              const sponsorLogoUrl: any = getStrapiMedia(
-                sponsor.sponserLogo.data.attributes.url
-              );
-              return (
-                <img
-                  alt={sponsor.sponserLogo.data.attributes.alternativeText}
-                  src={sponsorLogoUrl}
-                />
-              );
-            })}
-        </div>
+      </div>
+      <div className=" flex flex-col [@media(min-width:1079px)]:flex-row  items-center justify-center gap-[48px]">
+        {data.sponsors &&
+          data.sponsors.map((sponsor: SponsersType) => {
+            const sponsorLogoUrl: any = getStrapiMedia(
+              sponsor.sponserLogo.data.attributes.url
+            );
+            return (
+              <img
+                alt={sponsor.sponserLogo.data.attributes.alternativeText}
+                src={sponsorLogoUrl}
+              />
+            );
+          })}
       </div>
     </>
   );

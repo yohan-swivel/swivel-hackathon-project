@@ -1,4 +1,3 @@
-import EmailFormContainer from "../email-form-container";
 
 interface AddressType {
   id: number;
@@ -44,9 +43,9 @@ const ContactInfoCard: React.FC<ContactInfoCardProps> = (props) => {
 const ContactUsCard: React.FC<ContactUsCardProps> = (props) => {
   return (
     <>
-      <div className="flex flex-col pt-16 px-0 pb-2.5 items-start justify-start text-5xl">
-        <div className="bg-glass-bg w-[1330px] flex flex-col p-8 box-border items-start justify-start gap-[64px]">
-          <div className="flex flex-row items-start justify-start gap-[106px]">
+      <div className="pt-16 px-0 pb-2.5 items-start justify-start text-5xl">
+        <div className="bg-glass-bg w-full max-w-[1330px] flex flex-col p-8 box-border items-start justify-start gap-[64px]">
+          <div className="flex [@media(min-width:1079px)]:flex-row flex-col items-start justify-start gap-[106px]">
             <ContactInfoCard
               iconSrc="/icoutlineemail.svg"
               contactLabelText="Email Us"
@@ -69,7 +68,7 @@ const ContactUsCard: React.FC<ContactUsCardProps> = (props) => {
                 Visit Us
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-start">
+            <div className="flex [@media(min-width:1079px)]:flex-row flex-col gap-8 text-start">
               {props.addresses &&
                 props.addresses.map((address: AddressType) => (
                   <div>

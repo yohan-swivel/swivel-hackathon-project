@@ -22,7 +22,7 @@ const FAQItem: React.FC<FAQType> = (props) => {
   return (
     <>
       <div
-        className={`self-stretch w-[1060px] mx-auto  bg-glass-bg items-center justify-between text-left text-base text-white font-para-medium p-[22px] box-border duration-500 group ${
+        className={`self-stretch max-w-[1060px] w-full mx-auto  bg-glass-bg items-center justify-between text-left text-base text-white font-para-medium p-[22px] box-border duration-500 group ${
           activeAccordElement === true ? "is-active bg-glass-bg" : ""
         }`}
       >

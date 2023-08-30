@@ -1,5 +1,5 @@
 // import Loader from './components/Loader';
 
-export default function RootLoading() {
-    return <></> ;
+export default function Loading() {
+    return <>hjhjhj</> ;
 }

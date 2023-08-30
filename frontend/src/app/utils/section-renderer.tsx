@@ -18,13 +18,13 @@ export function sectionRenderer(section: any, index: number) {
     case "sections.team-grid":
       return <TeamContainer key={index} data={section} />;
     case "sections.theme-stack":
-      // return <ThemeContainer key={index} data={section} />;
+      return <ThemeContainer key={index} data={section} />;
     case "sections.home-sponsers":
-      // return <SponsersContainer key={index} data={section} />;
+      return <SponsersContainer key={index} data={section} />;
     case "sections.faqs":
-      // return <FaqContainer key={index} data={section} />;
+      return <FaqContainer key={index} data={section} />;
     case "sections.contact-us-container":
-      // return <ContactUsContainer key={index} data={section} />;
+       return <ContactUsContainer key={index} data={section} />;
     default:
       return null;
   }

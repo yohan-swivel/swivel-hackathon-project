@@ -3,6 +3,8 @@ import { getStrapiMedia } from "@/app/utils/api-helpers";
 import GlitterButton from "../GlitterButton";
 import { useCallback, useState } from "react";
 import styles from "./navbar.module.css";
+import { FaBars } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
 
 export interface LogoItem {
   id: string;
@@ -68,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   return (
     <>
       <div className="shadow-md w-full fixed top-0 left-0 z-10">
-        <div className="md:flex items-center justify-between  [background:linear-gradient(90deg,_#15141a,_#111516_12.36%,_#111819_23.28%,_#11191b_34.69%,_#13161b_52.4%,_#15151b_68.54%,_#131213)] py-4 md:px-10 px-7 text-whitesmoke font-para-medium text-center">
+        <div className="[@media(min-width:1079px)]:flex items-center justify-between  [background:linear-gradient(90deg,_#15141a,_#111516_12.36%,_#111819_23.28%,_#11191b_34.69%,_#13161b_52.4%,_#15151b_68.54%,_#131213)] py-4 [@media(min-width:1079px)]:px-10 px-7 text-whitesmoke font-para-medium text-center">
           <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-800">
             <img
               className="relative max-w-[121px] object-cover"
@@ -78,12 +80,12 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           </div>
           <div
             onClick={() => setIsOpen(!isOpen)}
-            className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+            className="text-3xl absolute right-8 top-6 cursor-pointer [@media(min-width:1079px)]:hidden"
           >
-            Menu
+            {isOpen ? <IoMdClose /> : <FaBars />}
           </div>
           <ul
-            className={`md:flex md:items-center mt-14 md:mt-5 md:pb-0 pb-10 absolute justify-end bg-black md:bg-transparent md:static md:z-auto z-[-1] left-0 w-full  md:pl-0 pl-9 transition-all duration-500 ease-in ${
+            className={`[@media(min-width:1079px)]:flex [@media(min-width:1079px)]:items-center mt-14 [@media(min-width:1079px)]:mt-5 [@media(min-width:1079px)]:pb-0 pb-10 [@media(min-width:1079px)]:w-fit absolute justify-end [background:linear-gradient(90deg,_#15141a,_#111516_12.36%,_#111819_23.28%,_#11191b_34.69%,_#13161b_52.4%,_#15151b_68.54%,_#131213)] [@media(min-width:1079px)]:bg-transparent [@media(min-width:1079px)]:static [@media(min-width:1079px)]:z-auto z-[-1] left-0 w-full  [@media(min-width:1079px)]:pl-0 pl-9 transition-all duration-500 ease-in ${
               isOpen ? "top-20" : "top-[-490px]"
             }`}
           >
@@ -93,7 +95,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                   <>
                     <li
                       key={link.id}
-                      className={` md:ml-8 text-xl md:my-0 my-7 list-none  items-start justify-start cursor-pointer font-semibold ${
+                      className={` [@media(min-width:1079px)]:ml-8 text-base [@media(min-width:1079px)]:my-0 my-7 list-none  items-start justify-start cursor-pointer font-para-medium text-sm ${
                         styles.navbar
                       } ${link.id === activeTab ? styles.selectedTab : ""}`}
                       onClick={() =>
@@ -105,14 +107,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                   </>
                 );
               })}
-            <div className="flex flex-row flex-wrap content-center justify-center">
+            <div className="flex flex-row flex-wrap content-center justify-center [@media(min-width:1079px)]:hidden">
               <GlitterButton
                 buttonText={props.button.text}
                 iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
                 onClick={() => {}}
                 style={{ width: 247, height: 44 }}
                 type="button"
-                className="py-2  md:invisible"
+                className="py-2  [@media(min-width:1079px)]:invisible"
               />
             </div>
           </ul>
@@ -120,9 +122,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             buttonText={props.button.text}
             iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
             onClick={() => {}}
-            style={{ width: 247, height: 44 }}
+            style={{ width: "100%", maxWidth: 300, height: 44 }}
             type="button"
-            className="py-2 px-6 rounded invisible md:visible"
+            className="py-2 px-6 rounded invisible [@media(min-width:1079px)]:visible"
           />
         </div>
       </div>
