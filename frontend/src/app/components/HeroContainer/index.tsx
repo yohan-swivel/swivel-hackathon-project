@@ -13,6 +13,11 @@ export interface ButtonLink {
   type: string;
 }
 
+interface Button{
+  dataScrollTo:string
+  name:string
+}
+
 interface HeroContainerProps {
   id: number;
   __component: string;
@@ -21,7 +26,7 @@ interface HeroContainerProps {
   headerDescription: string;
   mainBackgroundFluidmark: Logo;
   subBackgroundFluidmark: { data: Array<LogoItem> };
-  buttonLink: NavbarLink;
+  heroButton: Button;
   bottemScrollButton: NavbarLink;
   dataScrollTo: string;
 }
@@ -79,9 +84,9 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
               {data.headerDescription}
             </div>
             <GlitterButton
-              buttonText={data.buttonLink.text}
+              buttonText={data.heroButton.name}
               iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-              onClick={() => handleButtonScrollTo(data.buttonLink.dataScrollTo)}
+              onClick={() => handleButtonScrollTo(data.heroButton.dataScrollTo)}
               style={{ width: "60%", height: "60%", position: "unset" }}
               type="button"
             />

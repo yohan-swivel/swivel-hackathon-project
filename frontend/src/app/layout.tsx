@@ -60,7 +60,6 @@ export default async function RootLayout({
   const global = await getGlobal();
   const navbarData: NavbarProps = global.data.attributes.navbar;
   const footerData: FooterProps = global.data.attributes.footer;
-
   return (
     <html>
       <body>

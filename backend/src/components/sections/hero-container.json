@@ -45,10 +45,10 @@
     "dataScrollTo": {
       "type": "string"
     },
-    "buttonLink": {
+    "heroButton": {
       "type": "component",
       "repeatable": false,
-      "component": "links.link"
+      "component": "elements.hero-button"
     }
   }
 }

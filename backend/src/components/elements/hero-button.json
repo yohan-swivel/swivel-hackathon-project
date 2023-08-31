@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_elements_hero_buttons",
+  "info": {
+    "displayName": "heroButton"
+  },
+  "options": {},
+  "attributes": {
+    "dataScrollTo": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
