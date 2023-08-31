@@ -24,7 +24,7 @@ export function sectionRenderer(section: any, index: number) {
     case "sections.faqs":
       return <FaqContainer key={index} data={section} />;
     case "sections.contact-us-container":
-      return <ContactUsContainer key={index} data={section} />;
+       return <ContactUsContainer key={index} data={section} />;
     default:
       return null;
   }

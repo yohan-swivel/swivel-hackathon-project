@@ -17,7 +17,7 @@ const GlanceContainer: React.FC<{ data: GlanceContainerProps }> = ({
   return (
     <>
       <section
-        className="flex flex-col p-2.5 box-border items-center justify-center gap-[48px]"
+        className="flex flex-col p-2.5 box-border items-center justify-center gap-[48px] md:px-16"
         data-scroll-to={data.dataScrollTo}
       >
 

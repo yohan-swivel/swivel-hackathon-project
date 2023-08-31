@@ -8,13 +8,14 @@ interface GlitterButtonProps {
   buttonText: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   style: CSSProperties;
+  className?: string;
 }
 
 const GlitterButton: React.FC<GlitterButtonProps> = (props) => {
   return (
     <>
       <button
-        className={` p-1 relative flex flex-row py-2.5 px-4 items-center justify-center center   ${styles.gradientButton} hover:${styles.gradientButtonHover}`}
+        className={`${props.className} p-1 flex flex-row py-2.5 px-4 items-center justify-center center   ${styles.gradientButton} hover:${styles.gradientButtonHover}`}
         onClick={props.onClick}
         style={props.style}
         type={props.type}
