@@ -12,6 +12,36 @@ body {
   filter: blur(200px);
 }
 
-.country  {
-  @apply  hover:bg-slate-600 !important
+.country {
+  @apply hover:bg-slate-600 !important;
+}
+
+.country.highlight {
+  @apply hover:bg-slate-600 !important;
+}
+
+.flag-dropdown {
+  width: 50px;
+}
+
+.selected-flag {
+  width: 50px;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  left: 31px !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  @apply bg-slate-700 !important;
+}
+
+.react-tel-input .form-control {
+  margin-top: 10px !important;
+  margin-left: 10px !important;
 }

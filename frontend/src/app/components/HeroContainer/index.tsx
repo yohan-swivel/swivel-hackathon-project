@@ -21,7 +21,7 @@ interface HeroContainerProps {
   headerDescription: string;
   mainBackgroundFluidmark: Logo;
   subBackgroundFluidmark: { data: Array<LogoItem> };
-  buttonLink: ButtonLink;
+  buttonLink: NavbarLink;
   bottemScrollButton: NavbarLink;
   dataScrollTo: string;
 }
@@ -36,6 +36,14 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
   const subBackgroundFluidmark2: any = getStrapiMedia(
     data.subBackgroundFluidmark.data[1].attributes.url
   );
+
+  const handleButtonScrollTo = useCallback((dataScrollTo: string) => {
+    const anchor = document.querySelector(`[data-scroll-to=${dataScrollTo}]`);
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <div className="flex min-h-[841px] relative">
       <div className="custom-glow left-0 right-0 absolute top-48 mx-auto w-[600px] h-[600px] min-w-0 opacity-10" />
@@ -61,10 +69,11 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
                   {data.headerText}
                 </b>
               </div>
-              {/* <div className={styles.stroketextcontainer}>
-                <h1 className={styles.stroketext}>Your Stroke Text</h1>
-              </div> */}
-              <b className={`relative tracking-[0.11em] text-[40px] md:text-[60px]`}>{data.headerYear}</b>
+              <b
+                className={`relative tracking-[0.11em] text-[40px] md:text-[60px]`}
+              >
+                {data.headerYear}
+              </b>
             </div>
             <div className="relative text-xl leading-[26px] font-semibold">
               {data.headerDescription}
@@ -72,8 +81,7 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
             <GlitterButton
               buttonText={data.buttonLink.text}
               iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-              // have to add the redirect path
-              onClick={() => {}}
+              onClick={() => handleButtonScrollTo(data.buttonLink.dataScrollTo)}
               style={{ width: "60%", height: "60%", position: "unset" }}
               type="button"
             />
@@ -102,16 +110,7 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
         </div>
 
         <BottemScrollButton
-          onClick={() =>
-            useCallback(() => {
-              const anchor = document.querySelector(
-                "[data-scroll-to= contactUsContainer]"
-              );
-              if (anchor) {
-                anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-              }
-            }, [])
-          }
+          onClick={() => handleButtonScrollTo(data.bottemScrollButton.dataScrollTo)}
         />
       </section>
     </div>

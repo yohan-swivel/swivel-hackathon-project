@@ -13,15 +13,15 @@
       "repeatable": true,
       "component": "links.link"
     },
-    "button": {
-      "type": "component",
-      "repeatable": false,
-      "component": "links.button-link"
-    },
     "navbarLogo": {
       "type": "component",
       "repeatable": false,
       "component": "layout.logo"
+    },
+    "navButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
     }
   }
 }

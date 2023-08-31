@@ -26,7 +26,7 @@ interface NavbarLogo {
   logoImg: Logo;
 }
 
-interface NavbarButton {
+export interface NavbarButton {
   id: number;
   url: string;
   newTab: boolean;
@@ -44,7 +44,7 @@ export interface NavbarLink {
 
 export interface NavbarProps {
   navbarLogo: NavbarLogo;
-  button: NavbarButton;
+  navButton: NavbarLink;
   links: Array<NavbarLink>;
 }
 
@@ -66,6 +66,13 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     },
     []
   );
+
+  const handleButtonScrollTo = useCallback((dataScrollTo: string) => {
+    const anchor = document.querySelector(`[data-scroll-to=${dataScrollTo}]`);
+    if (anchor) {
+      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <>
@@ -109,9 +116,11 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               })}
             <div className="flex flex-row flex-wrap content-center justify-center [@media(min-width:1079px)]:hidden">
               <GlitterButton
-                buttonText={props.button.text}
+                buttonText={props.navButton.text}
                 iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-                onClick={() => {}}
+                onClick={() =>
+                  handleButtonScrollTo(props.navButton.dataScrollTo)
+                }
                 style={{ width: 247, height: 44 }}
                 type="button"
                 className="py-2  [@media(min-width:1079px)]:invisible"
@@ -119,9 +128,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             </div>
           </ul>
           <GlitterButton
-            buttonText={props.button.text}
+            buttonText={props.navButton.text}
             iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-            onClick={() => {}}
+            onClick={() => handleButtonScrollTo(props.navButton.dataScrollTo)}
             style={{ width: "100%", maxWidth: 300, height: 44 }}
             type="button"
             className="py-2 px-6 rounded invisible [@media(min-width:1079px)]:visible"

@@ -23,7 +23,7 @@ async function getGlobal(): Promise<any> {
       "metadata",
       "favicon",
       "navbar.links",
-      "navbar.button",
+      "navbar.navButton",
       "navbar.navbarLogo.logoImg",
       "footer.navLinks",
       "footer.policyLinks",

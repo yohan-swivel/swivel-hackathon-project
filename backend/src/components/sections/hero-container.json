@@ -37,11 +37,6 @@
         "audios"
       ]
     },
-    "buttonLink": {
-      "type": "component",
-      "repeatable": false,
-      "component": "links.button-link"
-    },
     "bottemScrollButton": {
       "type": "component",
       "repeatable": false,
@@ -49,6 +44,11 @@
     },
     "dataScrollTo": {
       "type": "string"
+    },
+    "buttonLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "links.link"
     }
   }
 }
