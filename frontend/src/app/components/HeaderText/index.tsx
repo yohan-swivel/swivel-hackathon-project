@@ -3,6 +3,7 @@ import _ from "lodash";
 interface HeaderTextProps {
   headerText: string;
   headerDescription?: string;
+  descriptionPadding?: string;
 }
 
 const HeaderText: React.FC<HeaderTextProps> = (props) => {
@@ -12,7 +13,7 @@ const HeaderText: React.FC<HeaderTextProps> = (props) => {
       {_.isEmpty(props.headerDescription) ? (
         <></>
       ) : (
-        <div className="relative text-lg inline-block text-center">
+        <div className={`relative text-lg inline-block text-center ${props.descriptionPadding}`}>
           {props.headerDescription}
         </div>
       )}

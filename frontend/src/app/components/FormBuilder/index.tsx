@@ -59,7 +59,7 @@ const Feild: React.FC<FeildType> = (props) => {
       case "text-area":
         return (
           <textarea
-            className=" border-none bg-glass-bg h-[110px] w-[1320px] box-border  text-base text-gray-200"
+            className=" border-none bg-glass-bg h-[110px] w-full box-border  text-base text-gray-200"
             placeholder={props.placeholder}
             name={props.feildName}
             required={props.required}
@@ -155,11 +155,11 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
         }}
       />
       <div className="flex flex-col items-start justify-start gap-[32px]">
-        <div className="flex flex-row items-center justify-center">
+        <div className="flex flex-row items-center justify-center [@media(min-width:1079px)]:justify-start w-full">
           <b className="relative tracking-[0.03em]">{props.subHeaderText}</b>
         </div>
         <form ref={form} onSubmit={handleFormSubmit}>
-          <div className="grid grid-cols-2 gap-4 ">
+          <div className="grid grid-cols-1 [@media(min-width:1079px)]:grid-cols-2 gap-4 ">
             {props.feilds &&
               props.feilds.map((feild: FeildType, index: number) => (
                 <Feild {...feild} key={index} />

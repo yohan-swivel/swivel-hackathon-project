@@ -1,5 +1,5 @@
-// import Loader from './components/Loader';
+import LoadingAnimation from "./components/LoadingAnimation";
 
-export default function RootLoading() {
-    return <></> ;
+export default function Loading() {
+    return <LoadingAnimation/> ;
 }

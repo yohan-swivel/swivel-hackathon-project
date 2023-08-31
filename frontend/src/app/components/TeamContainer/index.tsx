@@ -28,16 +28,16 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
     data.fluidmarks.data[3].attributes.url
   );
 
-
   return (
     <>
       <section
-        className="flex flex-col items-center justify-center gap-[48px] text-center text-lg text-white font-para-medium"
+        className="flex flex-col items-center justify-center gap-[48px] text-center text-lg text-white font-para-medium px-16"
         data-scroll-to={data.dataScrollTo}
       >
         <HeaderText
           headerText={data.headerText}
           headerDescription={data.headerDescription}
+          descriptionPadding="px-16"
         />
         <div
           style={{
@@ -48,7 +48,7 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
         >
           <div>
             <img
-              className="opacity-[0.7] "
+              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
               alt={data.fluidmarks.data[0].attributes.alternativeText}
               src={fluidmark4}
             />
@@ -67,14 +67,14 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
             >
               <div>
                 <img
-                  className="opacity-[0.7] "
+                  className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
                   alt={data.fluidmarks.data[0].attributes.alternativeText}
                   src={fluidmark1}
                 />
               </div>
               <div>
                 <img
-                  className="opacity-[0.7]"
+                  className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
                   alt={data.fluidmarks.data[1].attributes.alternativeText}
                   src={fluidmark2}
                 />
@@ -83,7 +83,7 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
           </div>
           <div>
             <img
-              className="opacity-[0.7]"
+              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
               alt={data.fluidmarks.data[1].attributes.alternativeText}
               src={fluidmark3}
             />

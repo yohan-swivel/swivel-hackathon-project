@@ -5,6 +5,9 @@
   },
   "options": {},
   "attributes": {
+    "dataScrollTo": {
+      "type": "string"
+    },
     "email": {
       "type": "string"
     },
