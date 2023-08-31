@@ -1,7 +1,7 @@
 import GlitterButton from "../GlitterButton";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
-import React, { FormEvent, useRef } from "react";
+import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { getStrapiURL } from "@/app/utils/api-helpers";
 
@@ -24,6 +24,17 @@ export interface FormBuilderProps {
 }
 
 const Feild: React.FC<FeildType> = (props) => {
+  const [countyCode, setCountryCode] = useState<string>("");
+
+  useEffect(() => {
+    fetch("https://ipapi.co/json/")
+      .then((res) => res.json())
+      .then((response) => {
+        setCountryCode(response.country_code);
+      })
+      .catch((data) => {});
+  }, []);
+
   const renderFeildForType = (feild: FeildType) => {
     switch (feild.type) {
       case "email":
@@ -87,6 +98,7 @@ const Feild: React.FC<FeildType> = (props) => {
               width: 250,
             }}
             inputProps={{ name: props.feildName, required: props.required }}
+            country={countyCode.toLowerCase()}
           />
         );
     }
