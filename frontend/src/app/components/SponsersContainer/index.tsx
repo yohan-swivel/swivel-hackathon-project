@@ -29,12 +29,13 @@ const SponsersContainer: React.FC<{ data: SponsersContainerProps }> = ({
       </div>
       <div className=" flex flex-col [@media(min-width:1079px)]:flex-row  items-center justify-center gap-[48px]">
         {data.sponsors &&
-          data.sponsors.map((sponsor: SponsersType) => {
+          data.sponsors.map((sponsor: SponsersType, index: number) => {
             const sponsorLogoUrl: any = getStrapiMedia(
               sponsor.sponserLogo.data.attributes.url
             );
             return (
               <img
+                key={index}
                 alt={sponsor.sponserLogo.data.attributes.alternativeText}
                 src={sponsorLogoUrl}
               />

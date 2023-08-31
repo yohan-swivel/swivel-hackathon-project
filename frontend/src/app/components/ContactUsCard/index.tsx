@@ -1,3 +1,4 @@
+import parse from 'html-react-parser';
 interface AddressType {
   id: number;
   country: string;
@@ -9,7 +10,7 @@ export interface ContactUsCardProps {
   email: string;
   contactNumber: string;
   addresses: Array<AddressType>;
-  dataScrollTo: string
+  dataScrollTo: string;
 }
 
 interface ContactInfoCardProps {
@@ -73,15 +74,15 @@ const ContactUsCard: React.FC<ContactUsCardProps> = (props) => {
             </div>
             <div className="flex [@media(min-width:1079px)]:flex-row flex-col gap-8 text-start">
               {props.addresses &&
-                props.addresses.map((address: AddressType) => (
-                  <div>
+                props.addresses.map((address: AddressType, index: number) => (
+                  <div key={index}>
                     <div className="tracking-[0.18em] font-semibold mb-5">
                       {address.country}
                     </div>
                     <div className="self-stretch flex flex-row items-start justify-start gap-[32px] text-base">
                       <div className="flex-1 flex flex-col pt-0 pb-2.5 pr-2.5 pl-0 items-start justify-start">
                         <div className="relative leading-[30px] font-medium">
-                          <p className="m-0">{address.address}</p>
+                          <p className="m-0">{parse(address.address)}</p>
                         </div>
                       </div>
                     </div>

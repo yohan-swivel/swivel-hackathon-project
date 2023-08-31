@@ -48,9 +48,8 @@ const Footer: React.FC<FooterProps> = (props) => {
 
   return (
     <>
-    
       <div className="mx-auto flex flex-col w-full items-center justify-start text-left text-base text-whitesmoke font-para-medium">
-      <div className="custom-glow left-0 right-0 mx-auto w-[180px] h-[180px] opacity-50"></div>
+        <div className="custom-glow left-0 right-0 mx-auto w-[180px] h-[180px] opacity-50"></div>
         <div className="box-border flex flex-row pt-0 px-0 pb-10 items-center justify-between border-b-[1px] space-x-6 ">
           <img
             className="relative w-[121px] h-[66.4px] object-cover"
@@ -59,26 +58,23 @@ const Footer: React.FC<FooterProps> = (props) => {
           />
           <div className="lg:flex hidden flex-row items-start justify-start gap-[32px]">
             {props.navLinks &&
-              props.navLinks.map((link: NavbarLink) => (
-                <>
-                  <div
-                    className={`flex flex-row p-2.5 items-start justify-start cursor-pointer font-semibold ${styles.footer}`}
-                    onClick={() => handleDataScrollTo(link.dataScrollTo)}
-                  >
-                    {link.text}
-                  </div>
-                </>
+              props.navLinks.map((link: NavbarLink, index: number) => (
+                <div
+                  key={index}
+                  className={`flex flex-row p-2.5 items-start justify-start cursor-pointer font-semibold ${styles.footer}`}
+                  onClick={() => handleDataScrollTo(link.dataScrollTo)}
+                >
+                  {link.text}
+                </div>
               ))}
           </div>
 
           <div className="flex flex-row items-start justify-start gap-[24px]">
             {props.socials &&
-              props.socials.map((social: SoicalLink) => (
-                <>
-                  <a href={social.url}>
-                    <RenderSocialIcon social={social.social} />
-                  </a>
-                </>
+              props.socials.map((social: SoicalLink, index: number) => (
+                <a href={social.url} key={index}>
+                  <RenderSocialIcon social={social.social} />
+                </a>
               ))}
           </div>
         </div>
@@ -89,16 +85,15 @@ const Footer: React.FC<FooterProps> = (props) => {
           </div>
           <div className="relative font-medium ">
             {props.policyLinks &&
-              props.policyLinks.map((policyLink: PolicyLink) => (
-                <>
-                  <a
-                    style={{ marginLeft: 10, textDecoration: "none" }}
-                    href={policyLink.url}
-                    className="text-white"
-                  >
-                    {policyLink.text}
-                  </a>
-                </>
+              props.policyLinks.map((policyLink: PolicyLink, index: number) => (
+                <a
+                  key={index}
+                  style={{ marginLeft: 10, textDecoration: "none" }}
+                  href={policyLink.url}
+                  className="text-white"
+                >
+                  {policyLink.text}
+                </a>
               ))}
           </div>
         </div>

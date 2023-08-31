@@ -24,6 +24,7 @@ interface NavbarLogo {
   id: number;
   logoText: string;
   logoImg: Logo;
+  dataScrollTo: string;
 }
 
 export interface NavbarButton {
@@ -83,6 +84,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               className="relative max-w-[121px] object-cover"
               alt={props.navbarLogo.logoImg.data.attributes.alternativeText}
               src={navbarLogoUrl}
+              onClick={() =>
+                handleButtonScrollTo(props.navbarLogo.dataScrollTo)
+              }
             />
           </div>
           <div
@@ -99,19 +103,17 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             {props.links &&
               props.links.map((link: NavbarLink) => {
                 return (
-                  <>
-                    <li
-                      key={link.id}
-                      className={` [@media(min-width:1079px)]:ml-8 text-base [@media(min-width:1079px)]:my-0 my-7 list-none  items-start justify-start cursor-pointer font-para-medium text-sm ${
-                        styles.navbar
-                      } ${link.id === activeTab ? styles.selectedTab : ""}`}
-                      onClick={() =>
-                        handleDataScrollTo(link.dataScrollTo, link.id)
-                      }
-                    >
-                      {link.text}
-                    </li>
-                  </>
+                  <li
+                    key={link.id}
+                    className={` [@media(min-width:1079px)]:ml-8 text-base [@media(min-width:1079px)]:my-0 my-7 list-none  items-start justify-start cursor-pointer font-para-medium text-sm ${
+                      styles.navbar
+                    } ${link.id === activeTab ? styles.selectedTab : ""}`}
+                    onClick={() =>
+                      handleDataScrollTo(link.dataScrollTo, link.id)
+                    }
+                  >
+                    {link.text}
+                  </li>
                 );
               })}
             <div className="flex flex-row flex-wrap content-center justify-center [@media(min-width:1079px)]:hidden">

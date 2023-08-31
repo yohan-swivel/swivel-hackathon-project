@@ -1,7 +1,8 @@
 {
   "collectionName": "components_elements_address_items",
   "info": {
-    "displayName": "addressItem"
+    "displayName": "addressItem",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,7 +10,7 @@
       "type": "string"
     },
     "address": {
-      "type": "text"
+      "type": "richtext"
     }
   }
 }

@@ -64,7 +64,7 @@ export default async function RootLayout({
     <html>
       <body>
         <Suspense fallback={<Loading />}>
-          <Navbar {...navbarData} />
+          <Navbar {...navbarData}  />
           <main className="container mx-auto overflow-hidden space-y-8">
             {children}
           </main>

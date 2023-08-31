@@ -19,6 +19,9 @@
     },
     "logoText": {
       "type": "string"
+    },
+    "dataScrollTo": {
+      "type": "string"
     }
   }
 }
