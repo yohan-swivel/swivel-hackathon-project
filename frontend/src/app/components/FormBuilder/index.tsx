@@ -153,9 +153,15 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
         toast.error(errorData.path[0] + errorMessage);
       });
     }
-    res.ok
-      ? toast.success("Message received! We'll be in touch soon.")
-      : toast.error("Error inserting inquiry");
+    if (res.ok) {
+      props.feilds &&
+        props.feilds.map((feild: FeildType) => {
+          formRef[feild.feildName].value == "";
+        });
+      toast.success("Message received! We'll be in touch soon.");
+    } else {
+      toast.error("Error inserting inquiry");
+    }
   };
 
   return (
