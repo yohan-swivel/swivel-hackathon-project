@@ -21,59 +21,48 @@ const FAQItem: React.FC<FAQType> = (props) => {
   const [activeAccordElement, setActiveAccordElement] =
     useState<boolean>(false);
   return (
-    <>
-      <div
-        className={`self-stretch max-w-[1060px] w-full mx-auto  bg-glass-bg items-center justify-between text-left text-base text-white font-para-medium p-[22px] box-border duration-500 group ${
-          activeAccordElement === true ? "is-active bg-glass-bg" : ""
-        }`}
-      >
-        <div className="flex items-center">
-          <div className="w-full group-[.is-active]:font-bold">
-            {props.question}
-          </div>
-          <div
-            className="text-xl cursor-pointer"
-            onClick={() =>
-              activeAccordElement
-                ? setActiveAccordElement(false)
-                : setActiveAccordElement(true)
-            }
-          >
-            {activeAccordElement ? (
-              <AiOutlineMinusCircle />
-            ) : (
-              <AiOutlinePlusCircle />
-            )}
-          </div>
-        </div>
+    <div className="faq-container">
+      <div className="faq_item">
+        <p>{props.question}</p>
         <div
-          className={`overflow-hidden duration-500 ${
-            activeAccordElement === true ? "h-auto pt-4" : "h-0"
-          }  group-[.is-active]:h-auto`}
+          className="faq_item_icon"
+          onClick={() =>
+            activeAccordElement
+              ? setActiveAccordElement(false)
+              : setActiveAccordElement(true)
+          }
         >
-          {props.answer}
+          {activeAccordElement ? (
+            <AiOutlineMinusCircle />
+          ) : (
+            <AiOutlinePlusCircle />
+          )}
         </div>
       </div>
-    </>
+      <div
+        className={
+          activeAccordElement === true ? "faq_item_show" : "faq_item_hide"
+        }
+      >
+        <p className="faq_item_description">{props.answer}</p>
+      </div>
+    </div>
   );
 };
 
 const FaqContainer: React.FC<{ data: FaqContainerProps }> = ({ data }) => {
   return (
-    <>
-      <div
-        className="px-20 flex flex-col py-2.5 box-border items-center justify-center gap-[20px]"
-        data-scroll-to={data.dataScrollTo}
-      >
-        <div className="pb-10">
-          <HeaderText headerText={data.headerText} />
+    <div className="container_inner">
+      <div className="section" data-scroll-to={data.dataScrollTo}>
+        <HeaderText headerText={data.headerText} />
+        <div className="faq_row">
+          {data.faqs &&
+            data.faqs.map((faq: FAQType, index: number) => (
+              <FAQItem key={index} {...faq} />
+            ))}
         </div>
-        {data.faqs &&
-          data.faqs.map((faq: FAQType, index: number) => (
-            <FAQItem key={index} {...faq} />
-          ))}
       </div>
-    </>
+    </div>
   );
 };
 

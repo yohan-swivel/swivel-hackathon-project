@@ -9,13 +9,11 @@ interface HeaderTextProps {
 const HeaderText: React.FC<HeaderTextProps> = (props) => {
   return (
     <>
-      <b className="relative text-17xl">{props.headerText}</b>
+      <h3 className="section_title">{props.headerText}</h3>
       {_.isEmpty(props.headerDescription) ? (
         <></>
       ) : (
-        <div className={`relative text-lg inline-block text-center ${props.descriptionPadding}`}>
-          {props.headerDescription}
-        </div>
+        <p className="normal_txt ">{props.headerDescription}</p>
       )}
     </>
   );

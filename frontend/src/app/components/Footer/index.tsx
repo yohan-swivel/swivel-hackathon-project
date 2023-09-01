@@ -47,21 +47,19 @@ const Footer: React.FC<FooterProps> = (props) => {
   }, []);
 
   return (
-    <>
-      <div className="mx-auto flex flex-col w-full items-center justify-start text-left text-base text-whitesmoke font-para-medium">
-        <div className="custom-glow left-0 right-0 mx-auto w-[180px] h-[180px] opacity-50"></div>
-        <div className="box-border flex flex-row pt-0 px-0 pb-10 items-center justify-between border-b-[1px] space-x-6 ">
+    <div className="container">
+      <div className="">
+        <div className="footer_top_bar">
           <img
-            className="relative w-[121px] h-[66.4px] object-cover"
             alt={props.footerLogo.data.attributes.alternativeText}
             src={footerLogoUrl}
           />
-          <div className="lg:flex hidden flex-row items-start justify-start gap-[32px]">
+          <div className="footer_navBar">
             {props.navLinks &&
               props.navLinks.map((link: NavbarLink, index: number) => (
                 <div
                   key={index}
-                  className={`flex flex-row p-2.5 items-start justify-start cursor-pointer font-semibold ${styles.footer}`}
+                  className="footer_navBar_link"
                   onClick={() => handleDataScrollTo(link.dataScrollTo)}
                 >
                   {link.text}
@@ -69,7 +67,7 @@ const Footer: React.FC<FooterProps> = (props) => {
               ))}
           </div>
 
-          <div className="flex flex-row items-start justify-start gap-[24px]">
+          <div className="social_bar">
             {props.socials &&
               props.socials.map((social: SoicalLink, index: number) => (
                 <a href={social.url} key={index}>
@@ -78,27 +76,29 @@ const Footer: React.FC<FooterProps> = (props) => {
               ))}
           </div>
         </div>
-        <hr style={{ width: "100%" }} />
-        <div className="flex flex-col p-2.5 items-center justify-center gap-[10px]">
-          <div className="relative font-medium">
+
+
+        <hr className="hr-line"/>
+
+        <div className="footer_bottom">
+          <div className="normal_txt">
             © {new Date().getFullYear()} {props.copyrights}
           </div>
-          <div className="relative font-medium ">
+          {/* <div className="footer_bottom_link">
             {props.policyLinks &&
               props.policyLinks.map((policyLink: PolicyLink, index: number) => (
                 <a
                   key={index}
-                  style={{ marginLeft: 10, textDecoration: "none" }}
                   href={policyLink.url}
-                  className="text-white"
+                  className=""
                 >
                   {policyLink.text}
                 </a>
               ))}
-          </div>
+          </div> */}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,18 +1,12 @@
 const VenueCard: React.FC<{ venue: string }> = (props) => {
   return (
-    <div className="flex-1 bg-glass-bg h-[142px] overflow-hidden flex flex-col py-[3px] px-8 box-border items-center justify-center gap-[16px] text-center text-lg text-white font-para-medium">
-      <div className="flex flex-row items-center justify-center gap-[6px]">
-        <img
-          className="relative w-[22px] h-[22px] overflow-hidden shrink-0"
-          alt=""
-          src="/ionlocationoutline.svg"
-        />
-        <div className="relative">At</div>
+    <div className="box_style">
+      <div className="row">
+        <img alt="location" src="/ionlocationoutline.svg" />
+        <div className="sm_txt">Location:</div>
       </div>
-      <div className="self-stretch relative box-border h-px border-t-[1px] border-solid border-gray-200" />
-      <div className="flex flex-row items-center justify-center text-5xl">
-        <div className="relative">{props.venue}</div>
-      </div>
+      <div className="line" />
+      <div className="normal_txt">{props.venue}</div>
     </div>
   );
 };

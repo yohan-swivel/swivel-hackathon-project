@@ -15,12 +15,8 @@ const GlanceContainer: React.FC<{ data: GlanceContainerProps }> = ({
   data,
 }) => {
   return (
-    <>
-      <section
-        className="flex flex-col p-2.5 box-border items-center justify-center gap-[48px] md:px-16"
-        data-scroll-to={data.dataScrollTo}
-      >
-
+    <div className="container_inner" data-scroll-to={data.dataScrollTo}>
+      <section className="section">
         <HeaderText
           headerDescription={data.headerDescription}
           headerText={data.headerText}
@@ -29,10 +25,12 @@ const GlanceContainer: React.FC<{ data: GlanceContainerProps }> = ({
       {data.glanceStack &&
         data.glanceStack.map(
           (glanceStackItem: GlanceStackProps, index: number) => (
-            <GlanceStack key={index} {...glanceStackItem} />
+            <section className="section">
+              <GlanceStack key={index} {...glanceStackItem} />
+            </section>
           )
         )}
-    </>
+    </div>
   );
 };
 

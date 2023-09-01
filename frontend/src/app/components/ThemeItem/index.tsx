@@ -11,21 +11,14 @@ export interface ThemeItemProps {
 const ThemeItem: React.FC<ThemeItemProps> = (props) => {
   const themeIconUrl: any = getStrapiMedia(props.themeIcon.data.attributes.url);
   return (
-    <>
-      <div className="self-stretch flex-1 bg-glass-bg flex flex-col p-8 items-start justify-start gap-[32px]">
-        <img
-          className="relative w-[67px] h-[67px] overflow-hidden shrink-0"
-          alt={props.themeIcon.data.attributes.alternativeText}
-          src={themeIconUrl}
-        />
-        <b className="self-stretch relative">
-          <p className="m-0">{props.themeTitle}</p>
-        </b>
-        <div className="self-stretch relative text-base leading-[26px] font-medium">
-          {props.themeDescription}
-        </div>
-      </div>
-    </>
+    <div className="theme_box">
+      <img
+        alt={props.themeIcon.data.attributes.alternativeText}
+        src={themeIconUrl}
+      />
+      <h5>{props.themeTitle}</h5>
+      <p>{props.themeDescription}</p>
+    </div>
   );
 };
 

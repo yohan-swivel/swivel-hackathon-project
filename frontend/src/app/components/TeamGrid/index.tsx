@@ -8,17 +8,15 @@ export interface TeamsGridProps {
 
 const TeamGrid: React.FC<TeamsGridProps> = (props) => {
   return (
-    <>
-      <div className="relative text-13xl mt-10">{props.teamName}</div>
-      <div className="self-stretch flex flex-row items-center justify-center mt-10">
-        <div className="[@media(min-width:1079px)]:flex grid grid-cols-1 [@media(min-width:1079px)]:grid-cols-3 items-center justify-center gap-[32px]">
+    <div className="teams_board">
+      <h6>{props.teamName}</h6>
+        <div className="team_box_row">
           {props.members &&
             props.members.map((member: TeamGridItemProps, index: number) => (
               <TeamGridItem key={index} {...member} />
             ))}
         </div>
-      </div>
-    </>
+    </div>
   );
 };
 

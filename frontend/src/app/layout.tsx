@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./responsive.css";
 import { getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
 import { FALLBACK_SEO } from "./utils/constants";
@@ -65,7 +66,7 @@ export default async function RootLayout({
       <body>
         <Suspense fallback={<Loading />}>
           <Navbar {...navbarData}  />
-          <main className="container mx-auto overflow-hidden space-y-8">
+          <main className="mx-auto overflow-hidden space-y-8">
             {children}
           </main>
           <Footer {...footerData} />

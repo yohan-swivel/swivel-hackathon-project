@@ -13,19 +13,16 @@ const TeamGridItem: React.FC<TeamGridItemProps> = (props) => {
     props.memberImage.data.attributes.url
   );
   return (
-    <>
-      <div className="bg-glass-bg max-w-[316px] flex flex-col p-8 box-border items-center justify-center gap-[32px] text-lg text-white font-para-medium">
-        <img
-          className="self-stretch flex-1 relative max-w-full overflow-hidden max-h-full object-cover"
-          alt={props.memberImage.data.attributes.alternativeText}
-          src={memberImageUrl}
-        />
-        <div>
-          <b>{props.memberName}</b>
-          <div className="text-mini mt-2">{props.memberDesignation}</div>
-        </div>
+    <div className="team_box">
+      <img
+        alt={props.memberImage.data.attributes.alternativeText}
+        src={memberImageUrl}
+      />
+      <div className="team_box_content">
+        <p>{props.memberName}<br/><span>{props.memberDesignation}</span></p>
+        
       </div>
-    </>
+    </div>
   );
 };
 
