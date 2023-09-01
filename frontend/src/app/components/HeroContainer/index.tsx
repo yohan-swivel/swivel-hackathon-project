@@ -66,7 +66,7 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
             <div className="hero_center_content">
               <h1>{data.headerText}</h1>
               <span>
-                <img src={"/year.png"} />
+                <img src={"/year2.png"} />
               </span>
               <p>{data.headerDescription}</p>
               <div>
