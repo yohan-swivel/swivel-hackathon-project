@@ -11,8 +11,6 @@ const CountDownCard: React.FC<CountDownProps> = (props) => {
   const [hydrated, setHydrated] = useState(false);
   const [timerCompleted, setTimerCompleted] = useState(false);
 
-  
-
   useEffect(() => {
     setHydrated(true);
   }, []);
@@ -20,7 +18,6 @@ const CountDownCard: React.FC<CountDownProps> = (props) => {
     return null;
   }
 
-  
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
       setTimerCompleted(completed);
@@ -35,25 +32,14 @@ const CountDownCard: React.FC<CountDownProps> = (props) => {
   };
 
   return (
-    <div className="flex-1 bg-glass-bg h-[142px] overflow-hidden flex flex-col py-[3px] px-8 box-border items-center justify-center gap-[16px] text-center text-lg text-white font-para-medium">
-      <div className="flex flex-row items-center justify-center gap-[6px]">
-        <img
-          className="relative w-[22px] h-[22px] overflow-hidden shrink-0"
-          alt=""
-          src="/ritimeline.svg"
-        />
-        <div>
-          {timerCompleted ? <></> : <>Starts In</>}
-        </div>
+    <div className="box_style">
+      <div className="row">
+        <img alt="countdown" src="/ritimeline.svg" />
+        {timerCompleted ? <></> : <p className="sm_txt">Countdown:</p>}
       </div>
-      <div className="self-stretch relative box-border h-px border-t-[1px] border-solid border-gray-200" />
-      <div className="flex flex-row items-center justify-center text-5xl">
-        <div className="relative">
-          <Countdown
-            date={new Date(props.countDownTime)}
-            renderer={renderer}
-          />
-        </div>
+      <div className="line" />
+      <div className="normal_txt">
+        <Countdown date={new Date(props.countDownTime)} renderer={renderer} />
       </div>
     </div>
   );

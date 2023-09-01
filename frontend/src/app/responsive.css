@@ -1,0 +1,171 @@
+@media (min-width: 0px) and (max-width: 768px) {
+  .themes_grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .grid_container_2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero_bg_img {
+    width: 100%;
+  }
+
+  .normal_txt {
+    font-size: 0.9rem;
+  }
+
+  .footer_bottom_links {
+    font-size: 0.9rem;
+  }
+
+  .footer_bottom_link > a {
+    font-size: 0.9rem;
+  }
+
+  .form_grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero_center_content h1 {
+    font-size: 3rem;
+  }
+
+  .hero_center_content span {
+    font-size: 3rem;
+  }
+
+  .hero_center_content p {
+    font-size: 0.9rem;
+  }
+
+  .hero_bg_icons {
+    display: none;
+  }
+
+  .section_title {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .box_benefit > h4 {
+    font-size: 1rem;
+  }
+
+  .box_benefit > p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  .teams_board > h6 {
+    font-size: 1.5rem;
+  }
+
+  .theme_box > h5 {
+    font-size: 1.2rem;
+  }
+
+  .theme_box > p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+
+  .faq_item > p {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
+
+  .contact_subtitle {
+    font-size: 1.2rem;
+  }
+
+  .location_grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .container_inner {
+    width: 90%;
+    margin: auto;
+  }
+  .nav_item_list {
+    display: none;
+  }
+
+  .nav_btn_mobile {
+    display: block;
+  }
+
+  .nav_btn {
+    display: none;
+  }
+  .themes_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer_navBar {
+    display: none;
+  }
+
+  .location_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nav_item_list_mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      #11191b 34.69%,
+      #13161b 52.4%,
+      #15151b 68.54%,
+      #121212 100%
+    );
+    width: 100%;
+    height: 100vh;
+  }
+
+  .nav_item_list_mobile.open {
+    display: block;
+  }
+
+  .nav_item_mm {
+    list-style: none;
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nav_item_m {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 15px;
+  }
+
+  .cl_icon {
+    display: flex;
+    padding: 20px 20px;
+  }
+
+  .hero_center {
+    margin-top: 0;
+  }
+
+  .logo_img {
+    width: 6rem;
+    height: auto;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1980px) {
+  .container {
+    width: 75% !important;
+    margin: auto;
+  }
+}

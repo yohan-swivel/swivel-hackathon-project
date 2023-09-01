@@ -17,14 +17,14 @@ const InitiateContainer: React.FC<{ data: InitiateContainerProps }> = ({
   data,
 }) => {
   return (
-    <section className="px-16 grid grid-cols-1 [@media(min-width:1079px)]:grid-cols-3 gap-[20px] text-center text-lg text-white font-para-medium">
+    <div className="container_inner init_row">
       <CountDownCard
         completedText={data.countdownCompletedMessage}
         countDownTime={data.countdownDateTime}
       />
       <DateCard date={data.commencement} />
       <VenueCard venue={data.venue} />
-    </section>
+    </div>
   );
 };
 

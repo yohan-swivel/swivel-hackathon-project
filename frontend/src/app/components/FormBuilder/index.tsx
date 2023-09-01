@@ -40,7 +40,6 @@ const Feild: React.FC<FeildType> = (props) => {
       case "email":
         return (
           <input
-            className="self-stretch border-none bg-glass-bg h-[55px] flex flex-row py-2.5 px-4 box-border items-center justify-start text-base text-gray-200"
             placeholder={props.placeholder}
             type={props.type}
             name={props.feildName}
@@ -50,7 +49,6 @@ const Feild: React.FC<FeildType> = (props) => {
       case "number":
         return (
           <input
-            className="self-stretch border-none bg-glass-bg h-[55px] flex flex-row py-2.5 px-4 box-border items-center justify-start text-base text-gray-200"
             placeholder={props.placeholder}
             type={props.type}
             name={props.feildName}
@@ -60,7 +58,6 @@ const Feild: React.FC<FeildType> = (props) => {
       case "text":
         return (
           <input
-            className="self-stretch border-none bg-glass-bg h-[55px] flex flex-row py-2.5 px-4 box-border items-center justify-start text-base text-gray-200"
             placeholder={props.placeholder}
             type={props.type}
             name={props.feildName}
@@ -70,23 +67,23 @@ const Feild: React.FC<FeildType> = (props) => {
       case "text-area":
         return (
           <textarea
-            className=" border-none bg-glass-bg h-[110px] w-full box-border  text-base text-gray-200"
             placeholder={props.placeholder}
             name={props.feildName}
             required={props.required}
+            rows={5}
           />
         );
       case "phone":
         return (
           <PhoneInput
             placeholder={props.placeholder}
-            containerStyle={{ height: 55, border: "none" }}
             inputStyle={{
               width: "100%",
-              height: 55,
+              height: 50,
               backgroundColor: "rgba(255, 255, 255, 0.03)",
               border: "none",
               color: "rgba(255, 255, 255, 0.5)",
+              marginLeft: 0 + "px !important",
             }}
             buttonStyle={{
               backgroundColor: "rgba(255, 255, 255, 0.03)",
@@ -95,7 +92,6 @@ const Feild: React.FC<FeildType> = (props) => {
             dropdownStyle={{
               backgroundColor: "rgba(255, 255, 255, 0.03)",
               color: "rgba(255, 255, 255, 0.5)",
-              width: 250,
             }}
             inputProps={{ name: props.feildName, required: props.required }}
             country={countyCode.toLowerCase()}
@@ -105,15 +101,13 @@ const Feild: React.FC<FeildType> = (props) => {
   };
 
   return (
-    <>
-      <div className="mt-6  w-[649px] flex flex-col items-start justify-center gap-[16px] text-left text-lg text-white font-para-medium">
-        <b className="relative">
-          <span>{props.label}</span>
-          {props.required ? <span className="text-red"> *</span> : <></>}
-        </b>
-        {renderFeildForType({ ...props })}
-      </div>
-    </>
+    <div className="form_field">
+      <p>
+        {props.label}
+        {props.required ? <span> *</span> : <></>}
+      </p>
+      {renderFeildForType({ ...props })}
+    </div>
   );
 };
 
@@ -166,12 +160,10 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
           },
         }}
       />
-      <div className="flex flex-col items-start justify-start gap-[32px]">
-        <div className="flex flex-row items-center justify-center [@media(min-width:1079px)]:justify-start w-full">
-          <b className="relative tracking-[0.03em]">{props.subHeaderText}</b>
-        </div>
-        <form ref={form} onSubmit={handleFormSubmit}>
-          <div className="grid grid-cols-1 [@media(min-width:1079px)]:grid-cols-2 gap-4 ">
+      <div className="">
+        <h5 className="contact_subtitle">{props.subHeaderText}</h5>
+        <form ref={form} onSubmit={handleFormSubmit} >
+          <div className="form_grid">
             {props.feilds &&
               props.feilds.map((feild: FeildType, index: number) => (
                 <Feild {...feild} key={index} />
@@ -179,11 +171,8 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
           </div>
           <GlitterButton
             buttonText={props.submitButtonLabel}
-            iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
             style={{
               width: "100%",
-              height: "60%",
-              marginTop: 50,
             }}
             type="submit"
           />

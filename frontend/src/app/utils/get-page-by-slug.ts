@@ -6,5 +6,5 @@ export async function getPageBySlug() {
     populate: "deep,5",
   };
   const options = { headers: { Authorization: `Bearer ${token}` } };
-  return await fetchAPI("/pages/1", urlParamsObject, options);
+  return await fetchAPI("/pages/3", urlParamsObject, options);
 }
