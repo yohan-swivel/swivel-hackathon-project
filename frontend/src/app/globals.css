@@ -316,8 +316,12 @@ html {
 }
 
 .section {
-  margin-top: 80px !important;
-  margin-bottom: 80px !important;
+  padding-top: 110px;
+}
+
+.section_footer {
+  padding-top: 120px;
+  margin-bottom: 80px;
 }
 
 .section_title {
@@ -738,4 +742,8 @@ textarea {
 
 .nav_btn_mobile {
   display: none;
+}
+
+.down_arrow > img{
+  z-index: 10;
 }
