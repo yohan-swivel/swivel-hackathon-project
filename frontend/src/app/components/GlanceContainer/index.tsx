@@ -25,7 +25,7 @@ const GlanceContainer: React.FC<{ data: GlanceContainerProps }> = ({
       {data.glanceStack &&
         data.glanceStack.map(
           (glanceStackItem: GlanceStackProps, index: number) => (
-            <section className="section">
+            <section className="section" key={index}>
               <GlanceStack key={index} {...glanceStackItem} />
             </section>
           )

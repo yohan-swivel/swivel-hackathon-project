@@ -77,16 +77,12 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
                   type="button"
                 />
               </div>
-              <BottemScrollButton
-                onClick={() =>
-                  handleButtonScrollTo(data.bottemScrollButton.dataScrollTo)
-                }
-              />
+              <BottemScrollButton onClick={() => {}} />
             </div>
           </div>
         </div>
       </div>
-      <div className="ft_gradient"/>
+      <div className="ft_gradient" />
       <div className="hero_bg_icons">
         <div>
           <img
