@@ -71,6 +71,13 @@ const Feild: React.FC<FeildType> = (props) => {
             name={props.feildName}
             required={props.required}
             rows={5}
+            style={{
+              fontFamily: "inherit",
+              fontSize: "1rem",
+              fontStyle: "normal",
+              fontWeight: 400,
+              lineHeight: "normal",
+            }}
           />
         );
       case "phone":
@@ -78,19 +85,19 @@ const Feild: React.FC<FeildType> = (props) => {
           <PhoneInput
             placeholder={props.placeholder}
             inputStyle={{
-              width: "100%",
+              width: "95%",
               height: 50,
-              backgroundColor: "rgba(255, 255, 255, 0.03)",
+              backgroundColor: "#191919",
               border: "none",
               color: "rgba(255, 255, 255, 0.5)",
-              marginLeft: 0 + "px !important",
+              marginLeft: 35 + "px !important",
             }}
             buttonStyle={{
-              backgroundColor: "rgba(255, 255, 255, 0.03)",
+              backgroundColor: "#191919",
               border: "none",
             }}
             dropdownStyle={{
-              backgroundColor: "rgba(255, 255, 255, 0.03)",
+              backgroundColor: "#191919",
               color: "rgba(255, 255, 255, 0.5)",
             }}
             inputProps={{ name: props.feildName, required: props.required }}
@@ -162,7 +169,7 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
       />
       <div className="">
         <h5 className="contact_subtitle">{props.subHeaderText}</h5>
-        <form ref={form} onSubmit={handleFormSubmit} >
+        <form ref={form} onSubmit={handleFormSubmit}>
           <div className="form_grid">
             {props.feilds &&
               props.feilds.map((feild: FeildType, index: number) => (

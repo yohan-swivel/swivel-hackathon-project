@@ -65,7 +65,9 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
             </div>
             <div className="hero_center_content">
               <h1>{data.headerText}</h1>
-              <span> {data.headerYear}</span>
+              <span>
+                <img src={"/year.png"} />
+              </span>
               <p>{data.headerDescription}</p>
               <div>
                 <GlitterButton

@@ -29,11 +29,11 @@ html {
 }
 
 .flag-dropdown {
-  width: 50px;
+  width: 70px;
 }
 
 .selected-flag {
-  width: 50px;
+  width: 100px;
 }
 
 .react-tel-input .flag-dropdown.open .selected-flag {
@@ -42,7 +42,7 @@ html {
 }
 
 .react-tel-input .selected-flag .arrow {
-  left: 31px !important;
+  left: 50px !important;
 }
 
 .react-tel-input .country-list .country.highlight {
@@ -83,6 +83,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .logo_img {
@@ -139,7 +140,7 @@ html {
   cursor: pointer;
   background-origin: border-box;
   border: 3px solid transparent;
-  border-image: linear-gradient(to right, #89298d, #1f5da1);
+  border-image: linear-gradient(to right, #1f5da1, #89298d);
   border-image-slice: 1;
   transition: border-image 0.3s;
   display: flex;
@@ -151,7 +152,7 @@ html {
 }
 
 .gradientButton:hover {
-  background-image: linear-gradient(to right, #89298d, #1f5da1);
+  background-image: linear-gradient(to right, #1f5da1, #89298d);
   background-size: contain;
 }
 
@@ -744,6 +745,12 @@ textarea {
   display: none;
 }
 
-.down_arrow > img{
+.down_arrow > img {
   z-index: 10;
 }
+
+.react-tel-input .selected-flag:hover {
+  background-color: #191919 !important;
+  
+}
+

@@ -81,7 +81,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
       <div className="container">
         <div className="top_navBar_items">
           <img
-            className="logo_img"
+            className="logo_img "
             alt={props.navbarLogo.logoImg.data.attributes.alternativeText}
             src={navbarLogoUrl}
             onClick={() => handleButtonScrollTo(props.navbarLogo.dataScrollTo)}
