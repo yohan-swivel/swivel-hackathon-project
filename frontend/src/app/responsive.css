@@ -54,7 +54,6 @@
 
   .box_benefit > p {
     font-size: 0.9rem;
-    line-height: 1.2rem;
   }
 
   .teams_board > h6 {
@@ -67,11 +66,6 @@
 
   .theme_box > p {
     font-size: 0.9rem;
-    line-height: 1.3rem;
-  }
-
-  .faq_item > p {
-    line-height: 1.3rem;
   }
 
   .contact_subtitle {
@@ -83,12 +77,20 @@
   }
 
   .faq_item_description {
-    color: #fff;
     font-size: 0.9rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.625rem;
-    text-align: left;
+    padding-top: 1rem;
+  }
+
+  .icon_row2 {
+    display: none;
+  }
+
+  .icon_row3 {
+    display: none;
+  }
+
+  .react-tel-input{
+    width: 93% !important;
   }
 }
 
