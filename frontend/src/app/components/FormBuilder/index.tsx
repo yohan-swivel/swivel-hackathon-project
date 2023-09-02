@@ -1,6 +1,6 @@
 import GlitterButton from "../GlitterButton";
 import "react-phone-input-2/lib/style.css";
-import PhoneInput from "react-phone-input-2";
+import PhoneInput, { CountryData } from "react-phone-input-2";
 import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { getStrapiURL } from "@/app/utils/api-helpers";
@@ -23,7 +23,11 @@ export interface FormBuilderProps {
   feilds: Array<FeildType>;
 }
 
-const Feild: React.FC<FeildType> = (props) => {
+const Feild: React.FC<{
+  feild: FeildType;
+  setPhoneInput: React.Dispatch<React.SetStateAction<string>>;
+  phoneInput: string;
+}> = (props) => {
   const [countyCode, setCountryCode] = useState<string>("");
 
   useEffect(() => {
@@ -40,36 +44,36 @@ const Feild: React.FC<FeildType> = (props) => {
       case "email":
         return (
           <input
-            placeholder={props.placeholder}
-            type={props.type}
-            name={props.feildName}
-            required={props.required}
+            placeholder={props.feild.placeholder}
+            type={props.feild.type}
+            name={props.feild.feildName}
+            required={props.feild.required}
           />
         );
       case "number":
         return (
           <input
-            placeholder={props.placeholder}
-            type={props.type}
-            name={props.feildName}
-            required={props.required}
+            placeholder={props.feild.placeholder}
+            type={props.feild.type}
+            name={props.feild.feildName}
+            required={props.feild.required}
           />
         );
       case "text":
         return (
           <input
-            placeholder={props.placeholder}
-            type={props.type}
-            name={props.feildName}
-            required={props.required}
+            placeholder={props.feild.placeholder}
+            type={props.feild.type}
+            name={props.feild.feildName}
+            required={props.feild.required}
           />
         );
       case "text-area":
         return (
           <textarea
-            placeholder={props.placeholder}
-            name={props.feildName}
-            required={props.required}
+            placeholder={props.feild.placeholder}
+            name={props.feild.feildName}
+            required={props.feild.required}
             rows={5}
             style={{
               fontFamily: "inherit",
@@ -83,7 +87,7 @@ const Feild: React.FC<FeildType> = (props) => {
       case "phone":
         return (
           <PhoneInput
-            placeholder={props.placeholder}
+            placeholder={props.feild.placeholder}
             inputStyle={{
               width: "95%",
               height: 50,
@@ -100,8 +104,18 @@ const Feild: React.FC<FeildType> = (props) => {
               backgroundColor: "#191919",
               color: "rgba(255, 255, 255, 0.5)",
             }}
-            inputProps={{ name: props.feildName, required: props.required }}
+            inputProps={{
+              name: props.feild.feildName,
+              required: props.feild.required,
+            }}
             country={countyCode.toLowerCase()}
+            onChange={(
+              value: string,
+              data: {} | CountryData,
+              event: React.ChangeEvent<HTMLInputElement>,
+              formattedValue: string
+            ) => props.setPhoneInput(formattedValue)}
+            value={props.phoneInput}
           />
         );
     }
@@ -110,10 +124,10 @@ const Feild: React.FC<FeildType> = (props) => {
   return (
     <div className="form_field">
       <p>
-        {props.label}
-        {props.required ? <span> *</span> : <></>}
+        {props.feild.label}
+        {props.feild.required ? <span> *</span> : <></>}
       </p>
-      {renderFeildForType({ ...props })}
+      {renderFeildForType({ ...props.feild })}
     </div>
   );
 };
@@ -121,8 +135,9 @@ const Feild: React.FC<FeildType> = (props) => {
 const FormBuilder: React.FC<FormBuilderProps> = (props) => {
   const form: any = useRef();
   const submitToken = process.env.NEXT_PUBLIC_STRAPI_FORM_SUBMISSION_TOKEN;
+  const [phoneInput, setPhoneInput] = useState<string>("");
 
-  const handleFormSubmit: any = async (event: FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit: any = async (event: any) => {
     event.preventDefault();
     const formRef = form.current;
     let inquiryData: any = {};
@@ -154,10 +169,8 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
       });
     }
     if (res.ok) {
-      props.feilds &&
-        props.feilds.map((feild: FeildType) => {
-          formRef[feild.feildName].value == "";
-        });
+      event.target.reset();
+      setPhoneInput("");
       toast.success("Message received! We'll be in touch soon.");
     } else {
       toast.error("Error inserting inquiry");
@@ -179,7 +192,12 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
           <div className="form_grid">
             {props.feilds &&
               props.feilds.map((feild: FeildType, index: number) => (
-                <Feild {...feild} key={index} />
+                <Feild
+                  feild={{ ...feild }}
+                  key={index}
+                  phoneInput={phoneInput}
+                  setPhoneInput={setPhoneInput}
+                />
               ))}
           </div>
           <GlitterButton
