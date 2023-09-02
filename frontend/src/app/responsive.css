@@ -82,6 +82,12 @@
   .location_grid {
     grid-template-columns: 1fr !important;
   }
+  .team_box_row {
+    flex-wrap: wrap;
+  }
+  .teams_icon{
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 1180px) {
@@ -160,6 +166,12 @@
   .logo_img {
     width: 6rem;
     height: auto;
+  }
+  .teams_icon{
+    display: none;
+  }
+  .team_box_row {
+    flex-wrap: wrap;
   }
 }
 

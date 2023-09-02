@@ -4,6 +4,7 @@ interface HeaderTextProps {
   headerText: string;
   headerDescription?: string;
   descriptionPadding?: string;
+  descriptionWidth?: string
 }
 
 const HeaderText: React.FC<HeaderTextProps> = (props) => {
@@ -13,7 +14,7 @@ const HeaderText: React.FC<HeaderTextProps> = (props) => {
       {_.isEmpty(props.headerDescription) ? (
         <></>
       ) : (
-        <p className="normal_txt ">{props.headerDescription}</p>
+        <p className="normal_txt">{props.headerDescription}</p>
       )}
     </>
   );

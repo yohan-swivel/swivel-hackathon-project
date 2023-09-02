@@ -40,7 +40,8 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            // width: "80%",
+            alignItems: "center",
+            width: "100%",
           }}
         >
           <div>
@@ -50,41 +51,29 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
               src={fluidmark4}
             />
           </div>
+          <div>
+            <img
+                className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
+                alt={data.fluidmarks.data[1].attributes.alternativeText}
+                src={fluidmark3}
+            />
+          </div>
         </div>
         <div>
           {data.teams &&
             data.teams.map((team: TeamsGridProps, index: number) => (
-              <TeamGrid key={index} {...team} />
+              <TeamGrid key={index} {...team} fluidmark1={fluidmark1} fluidmark2={fluidmark2}/>
             ))}
         </div>
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
           }}
-          className="absolute mx-auto left-20 right-20"
         >
-          <div>
-            <img
-              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
-              alt={data.fluidmarks.data[0].attributes.alternativeText}
-              src={fluidmark1}
-            />
-          </div>
-          <div>
-            <img
-              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
-              alt={data.fluidmarks.data[1].attributes.alternativeText}
-              src={fluidmark2}
-            />
-          </div>
-          <div>
-            <img
-              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
-              alt={data.fluidmarks.data[1].attributes.alternativeText}
-              src={fluidmark3}
-            />
-          </div>
+
         </div>
       </section>
     </div>
