@@ -75,13 +75,6 @@ const Feild: React.FC<{
             name={props.feild.feildName}
             required={props.feild.required}
             rows={5}
-            style={{
-              fontFamily: "inherit",
-              fontSize: "1rem",
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "normal",
-            }}
           />
         );
       case "phone":

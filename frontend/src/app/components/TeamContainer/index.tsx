@@ -36,20 +36,17 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
           headerDescription={data.headerDescription}
           descriptionPadding="px-16"
         />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            // width: "80%",
-          }}
-        >
-          <div>
-            <img
-              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
-              alt={data.fluidmarks.data[0].attributes.alternativeText}
-              src={fluidmark4}
-            />
-          </div>
+        <div className="icon_row2">
+          <img
+            className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
+            alt={data.fluidmarks.data[0].attributes.alternativeText}
+            src={fluidmark4}
+          />
+          <img
+            className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
+            alt={data.fluidmarks.data[1].attributes.alternativeText}
+            src={fluidmark3}
+          />
         </div>
         <div>
           {data.teams &&
@@ -57,34 +54,17 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
               <TeamGrid key={index} {...team} />
             ))}
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-          className="absolute mx-auto left-20 right-20"
-        >
-          <div>
-            <img
-              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
-              alt={data.fluidmarks.data[0].attributes.alternativeText}
-              src={fluidmark1}
-            />
-          </div>
-          <div>
-            <img
-              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
-              alt={data.fluidmarks.data[1].attributes.alternativeText}
-              src={fluidmark2}
-            />
-          </div>
-          <div>
-            <img
-              className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
-              alt={data.fluidmarks.data[1].attributes.alternativeText}
-              src={fluidmark3}
-            />
-          </div>
+        <div className="icon_row3">
+          <img
+            className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
+            alt={data.fluidmarks.data[0].attributes.alternativeText}
+            src={fluidmark1}
+          />
+          <img
+            className="opacity-[0.7] invisible [@media(min-width:1079px)]:visible"
+            alt={data.fluidmarks.data[1].attributes.alternativeText}
+            src={fluidmark2}
+          />
         </div>
       </section>
     </div>
