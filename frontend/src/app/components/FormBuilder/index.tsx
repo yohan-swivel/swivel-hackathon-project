@@ -30,6 +30,8 @@ const Feild: React.FC<{
 }> = (props) => {
   const [countyCode, setCountryCode] = useState<string>("");
   const [validatePhoneNumber, setValidatePhoneNumber] = useState<string>("");
+  const [phoneNumberOnFocus, setPhoneNumberOnFocus] = useState<boolean>(false);
+
   useEffect(() => {
     fetch("https://ipapi.co/json/")
       .then((res) => res.json())
@@ -114,19 +116,23 @@ const Feild: React.FC<{
             }}
             value={props.phoneInput}
             isValid={(value, country) => {
-              if (validatePhoneNumber === "") {
-                return "Please enter phone number";
-              } else {
-                const phoneValidate = new RegExp(
-                  /^(\d{3})[- ]?(\d{3})[- ]?(\d{5})$/
-                ).test(value);
-                if (phoneValidate) {
-                  return true;
+              if (phoneNumberOnFocus) {
+                if (validatePhoneNumber === "") {
+                  return "Please enter phone number";
                 } else {
-                  return "Phone number should be in ISO format";
+                  const phoneValidate = new RegExp(
+                    /^(\d{3})[- ]?(\d{3})[- ]?(\d{5})$/
+                  ).test(value);
+                  if (phoneValidate) {
+                    return true;
+                  } else {
+                    return "Phone number should be in ISO format";
+                  }
                 }
+              } else {
+                return true;
               }
-            }}
+            }}        
           />
         );
     }
