@@ -18,8 +18,7 @@
     },
     "email": {
       "type": "email",
-      "required": true,
-      "unique": true
+      "required": true
     },
     "subject": {
       "type": "string",
