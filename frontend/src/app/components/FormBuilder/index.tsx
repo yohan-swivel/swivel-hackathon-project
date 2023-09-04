@@ -1,7 +1,7 @@
 import GlitterButton from "../GlitterButton";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput, { CountryData } from "react-phone-input-2";
-import React, { FormEvent, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
 import { getStrapiURL } from "@/app/utils/api-helpers";
 
@@ -29,7 +29,7 @@ const Feild: React.FC<{
   phoneInput: string;
 }> = (props) => {
   const [countyCode, setCountryCode] = useState<string>("");
-
+  const [validatePhoneNumber, setValidatePhoneNumber] = useState<string>("");
   useEffect(() => {
     fetch("https://ipapi.co/json/")
       .then((res) => res.json())
@@ -104,11 +104,29 @@ const Feild: React.FC<{
             country={countyCode.toLowerCase()}
             onChange={(
               value: string,
-              data: {} | CountryData,
+              data: CountryData,
               event: React.ChangeEvent<HTMLInputElement>,
               formattedValue: string
-            ) => props.setPhoneInput(formattedValue)}
+            ) => {
+              props.setPhoneInput(formattedValue);
+              const valueWithoutNumber = value.slice(data.dialCode.length);
+              setValidatePhoneNumber(valueWithoutNumber);
+            }}
             value={props.phoneInput}
+            isValid={(value, country) => {
+              if (validatePhoneNumber === "") {
+                return "Please enter phone number";
+              } else {
+                const phoneValidate = new RegExp(
+                  /^(\d{3})[- ]?(\d{3})[- ]?(\d{5})$/
+                ).test(value);
+                if (phoneValidate) {
+                  return true;
+                } else {
+                  return "Phone number should be in ISO format";
+                }
+              }
+            }}
           />
         );
     }
