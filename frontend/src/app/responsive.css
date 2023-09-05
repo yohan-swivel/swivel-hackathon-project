@@ -100,6 +100,10 @@
   .gradientButton {
     width: 100% !important;
   }
+
+  .con_box > a {
+    font-size: 14px !important;
+  }
 }
 
 @media only screen and (max-width: 1180px) {
@@ -186,6 +190,10 @@
 
   .gradientButton {
     width: 100% !important;
+  }
+
+  .con_box > a {
+    font-size: 14px !important;
   }
 }
 
