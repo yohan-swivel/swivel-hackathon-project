@@ -132,7 +132,7 @@ const Feild: React.FC<{
               } else {
                 return true;
               }
-            }}        
+            }}
           />
         );
     }
@@ -205,7 +205,7 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
       />
       <div className="">
         <h5 className="contact_subtitle">{props.subHeaderText}</h5>
-        <form ref={form} onSubmit={handleFormSubmit}>
+        <form ref={form} onSubmit={handleFormSubmit} className="">
           <div className="form_grid">
             {props.feilds &&
               props.feilds.map((feild: FeildType, index: number) => (
@@ -217,13 +217,16 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
                 />
               ))}
           </div>
-          <GlitterButton
-            buttonText={props.submitButtonLabel}
-            style={{
-              width: "100%",
-            }}
-            type="submit"
-          />
+          <div className="mx-auto w-1/2">
+            <GlitterButton
+              buttonText={props.submitButtonLabel}
+              type="submit"
+              style={{
+                width: "50%",
+                margin: "auto",
+              }}
+            />
+          </div>
         </form>
       </div>
     </>
