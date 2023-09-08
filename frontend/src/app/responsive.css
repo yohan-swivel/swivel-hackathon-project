@@ -92,6 +92,20 @@
   .react-tel-input {
     width: 93% !important;
   }
+  .section_privacy {
+    padding-top: 50px;
+  }
+
+  .section_block > h1 {
+    font-size: 1.5rem;
+  }
+
+  .section_block > h2 {
+    font-size: 1.2rem;
+  }
+
+  .ft_gradient_2 {
+    display: none;
 
   .contact_row1 {
     grid-template-columns: 1fr !important;

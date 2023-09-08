@@ -51,7 +51,7 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
 
   return (
     <>
-      <div className="hero_bg" data-scroll-to={data.dataScrollTo}>
+      <div className="hero_bg" id={data.dataScrollTo}>
         <div className="container">
           <div className="hero_center">
             <div className="hero_center_img">
@@ -73,10 +73,8 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
                 <GlitterButton
                   buttonText={data.heroButton.name}
                   iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-                  onClick={() =>
-                    handleButtonScrollTo(data.heroButton.dataScrollTo)
-                  }
-                  type="button"
+                  type="link"
+                  href={`/#${data.heroButton.dataScrollTo}`}
                 />
               </div>
               <BottemScrollButton onClick={() => {}} />

@@ -53,7 +53,7 @@ const FAQItem: React.FC<FAQType> = (props) => {
 const FaqContainer: React.FC<{ data: FaqContainerProps }> = ({ data }) => {
   return (
     <div className="container_inner">
-      <div className="section" data-scroll-to={data.dataScrollTo}>
+      <div className="section" id={data.dataScrollTo}>
         <HeaderText headerText={data.headerText} />
         <div className="faq_row">
           {data.faqs &&

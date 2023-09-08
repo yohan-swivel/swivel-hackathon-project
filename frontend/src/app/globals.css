@@ -795,3 +795,76 @@ textarea {
 .react-tel-input .form-control {
   padding-left: 35px !important;
 }
+
+.section_privacy {
+  padding-top: 110px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.section_privacy_bottom {
+  padding-bottom: 110px;
+  text-align: left;
+}
+
+.section_block {
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.section_block > h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.section_block > h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.section_block > p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.bg_privacy {
+  background: linear-gradient(
+    90deg,
+    #121212 0%,
+    #121212 0%,
+    #121212 0%,
+    #11191b 34.69%,
+    #13161b 52.4%,
+    #15151b 68.54%,
+    #121212 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100px; */
+}
+
+
+.ft_gradient_2 {
+  position: absolute;
+  bottom: 180px;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(18, 18, 18, 1));
+  height: 200px;
+  width: 100%;
+}

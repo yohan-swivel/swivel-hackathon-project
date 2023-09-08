@@ -14,7 +14,7 @@ interface ThemeContainerProps {
 const ThemeContainer: React.FC<{ data: ThemeContainerProps }> = ({ data }) => {
   return (
     <div className="container_inner">
-      <section className="section" data-scroll-to={data.dataScrollTo}>
+      <section className="section" id={data.dataScrollTo}>
         <HeaderText
           headerText={data.headerText}
           headerDescription={data.headerDescription}

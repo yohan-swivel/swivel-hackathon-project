@@ -1,0 +1,22 @@
+.mainHeader {
+  color: #fff;
+  text-align: center;
+
+  /* H1 */
+  font-family: Montserrat;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.firstPara {
+  align-self: stretch;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: justify;
+}
