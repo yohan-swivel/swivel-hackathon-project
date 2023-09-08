@@ -106,7 +106,8 @@
 
   .ft_gradient_2 {
     display: none;
-
+  }
+  
   .contact_row1 {
     grid-template-columns: 1fr !important;
   }

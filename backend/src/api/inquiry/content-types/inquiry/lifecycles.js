@@ -2,14 +2,14 @@ module.exports = {
   async afterCreate(event) {
     const { result } = event;
     try {
-      // const sentStatus = await sendFeedbackEmail(
-      //   result.email,
-      //   result.subject,
-      //   result.message
-      // );
-      // if (sentStatus) {
-      //   await sendResponseEmail(result.email);
-      // }
+      const sentStatus = await sendFeedbackEmail(
+        result.email,
+        result.subject,
+        result.message
+      );
+      if (sentStatus) {
+        await sendResponseEmail(result.email);
+      }
     } catch (err) {
       console.log(err);
     }

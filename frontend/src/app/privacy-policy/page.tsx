@@ -63,6 +63,7 @@ export default async function PageRoute() {
   const page = await getPageBySlug(privacyPolicyPageId);
   if (page.data.length === 0) return null;
   const contentSections = page.data.attributes.contentSection;
+  console.log(page)
   return (
     <>
       <div className="bg_privacy">
