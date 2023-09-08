@@ -15,7 +15,7 @@ const GlanceContainer: React.FC<{ data: GlanceContainerProps }> = ({
   data,
 }) => {
   return (
-    <div className="container_inner" data-scroll-to={data.dataScrollTo}>
+    <div className="container_inner" id={data.dataScrollTo}>
       <section className="section">
         <HeaderText
           headerDescription={data.headerDescription}

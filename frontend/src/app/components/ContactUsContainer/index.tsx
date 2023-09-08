@@ -17,7 +17,7 @@ const ContactUsContainer: React.FC<{ data: ContactUsContainerProps }> = ({
 }) => {
   return (
     <div className="container_inner">
-      <div className="section" data-scroll-to={data.dataScrollTo}>
+      <div className="section" id={data.dataScrollTo}>
         <HeaderText headerText={data.mainHeaderText} />
         <FormBuilder
           {...data.contactUsForm}

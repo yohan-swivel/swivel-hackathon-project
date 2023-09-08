@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
       setActiveTab(tabId);
       const anchor = document.querySelector(`[data-scroll-to=${dataScrollTo}]`);
       if (anchor) {
-        console.log(anchor)
+        console.log(anchor);
         anchor.scrollIntoView({ block: "start", behavior: "smooth" });
         setIsOpen(false);
       }
@@ -89,17 +89,22 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           <ul className="nav_item_list">
             {props.links &&
               props.links.map((link: NavbarLink) => {
+                console.log(link);
                 return (
-                  <li
-                    key={link.id}
-                    className={`nav_item ${
-                      link.id === activeTab ? "nav_item_active" : ""
-                    }`}
-                    onClick={() =>
-                      handleDataScrollTo(link.dataScrollTo, link.id)
-                    }
-                  >
-                    <p>{link.text}</p>
+                  <li key={link.id}>
+                    <a
+                      href={`#${
+                        link.dataScrollTo === "heroContentContainer"
+                          ? ""
+                          : link.dataScrollTo
+                      }`}
+                      className={`nav_item ${
+                        link.id === activeTab ? "nav_item_active" : ""
+                      }`}
+                      onClick={() => setActiveTab(link.id)}
+                    >
+                      {link.text}
+                    </a>
                   </li>
                 );
               })}
@@ -118,7 +123,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               {isOpen ? <IoMdClose /> : <FaBars />}
             </div>
             <div className={`nav_item_list_mobile ${isOpen ? "open" : ""}`}>
-              <div onClick={() => setIsOpen(false)} className="bred-icon cl_icon">
+              <div
+                onClick={() => setIsOpen(false)}
+                className="bred-icon cl_icon"
+              >
                 <IoMdClose />
               </div>
               <ul className="nav_item_mm">

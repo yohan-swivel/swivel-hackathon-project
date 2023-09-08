@@ -15,6 +15,8 @@ interface TeamContainerProps {
 }
 
 const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
+  console.log('data', data);
+  
   const fluidmark1: any = getStrapiMedia(
     data.fluidmarks.data[0].attributes.url
   );
@@ -30,7 +32,7 @@ const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
 
   return (
     <div className="container_inner">
-      <section className="section" data-scroll-to={data.dataScrollTo}>
+      <section className="section" id={data.dataScrollTo}>
         <HeaderText
           headerText={data.headerText}
           headerDescription={data.headerDescription}

@@ -33,7 +33,7 @@ const ContactInfoCard: React.FC<ContactInfoCardProps> = (props) => {
 
 const ContactUsCard: React.FC<ContactUsCardProps> = (props) => {
   return (
-    <div className="section_footer" data-scroll-to={props.dataScrollTo}>
+    <div className="section_footer" id={props.dataScrollTo}>
       <div className="cont_card">
         <div className="contact_row1">
           <ContactInfoCard
