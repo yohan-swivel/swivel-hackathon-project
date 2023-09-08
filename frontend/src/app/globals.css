@@ -402,7 +402,6 @@ html {
 .team_box {
   display: flex;
   width: 15rem;
-  height: 24rem;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.03);
   flex-direction: column;
@@ -414,7 +413,7 @@ html {
 .team_box > img {
   width: 100%;
   object-fit: cover;
-  height: 300px;
+  height: 250px;
 }
 
 .team_box_content > p {
@@ -478,10 +477,6 @@ html {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-}
-
-.partner_row > img {
-  width: 230px;
 }
 
 .faq_row {
@@ -612,11 +607,10 @@ textarea {
 }
 
 .contact_row1 {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
   align-items: center;
-  gap: 4rem;
-  flex-wrap: wrap;
 }
 
 .full_width {
@@ -644,21 +638,29 @@ textarea {
 
 .con_box_rw > p {
   color: #fff;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.15rem;
 }
 
-.con_box > p {
+.con_box > p > a {
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
 }
 
+.con_box > a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
 .location_grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
 }
 
 .location {

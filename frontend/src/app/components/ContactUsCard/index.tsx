@@ -17,6 +17,7 @@ interface ContactInfoCardProps {
   iconSrc: string;
   contactLabelText: string;
   contactTextValue: string;
+  type: "email" | "phone";
 }
 
 const ContactInfoCard: React.FC<ContactInfoCardProps> = (props) => {
@@ -26,7 +27,15 @@ const ContactInfoCard: React.FC<ContactInfoCardProps> = (props) => {
         <img alt="contact Icon" src={props.iconSrc} />
         <p>{props.contactLabelText}</p>
       </div>
-      <p>{props.contactTextValue}</p>
+      <a
+        href={
+          props.type === "email"
+            ? `mailto:${props.contactTextValue}`
+            : `tel:${props.contactTextValue}`
+        }
+      >
+        <p>{props.contactTextValue}</p>
+      </a>
     </div>
   );
 };
@@ -40,11 +49,13 @@ const ContactUsCard: React.FC<ContactUsCardProps> = (props) => {
             iconSrc="/icoutlineemail.svg"
             contactLabelText="Email Us"
             contactTextValue={props.email}
+            type="email"
           />
           <ContactInfoCard
             iconSrc="/icoutlinephoneenabled.svg"
             contactLabelText="Call Us"
             contactTextValue={props.contactNumber}
+            type="phone"
           />
         </div>
         <div className="full_width">
