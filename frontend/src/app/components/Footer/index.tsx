@@ -84,7 +84,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           <div className="normal_txt">
             © {new Date().getFullYear()} {props.copyrights}
           </div>
-          {/* <div className="footer_bottom_link">
+          <div className="footer_bottom_link">
             {props.policyLinks &&
               props.policyLinks.map((policyLink: PolicyLink, index: number) => (
                 <a
@@ -95,7 +95,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                   {policyLink.text}
                 </a>
               ))}
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
