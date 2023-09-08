@@ -61,7 +61,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
       setActiveTab(tabId);
       const anchor = document.querySelector(`[data-scroll-to=${dataScrollTo}]`);
       if (anchor) {
-        console.log(anchor);
         anchor.scrollIntoView({ block: "start", behavior: "smooth" });
         setIsOpen(false);
       }
@@ -69,35 +68,28 @@ const Navbar: React.FC<NavbarProps> = (props) => {
     []
   );
 
-  const handleButtonScrollTo = useCallback((dataScrollTo: string) => {
-    const anchor = document.querySelector(`[data-scroll-to=${dataScrollTo}]`);
-    if (anchor) {
-      anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-    }
-  }, []);
-
   return (
     <div className="top_navBar">
       <div className="container">
         <div className="top_navBar_items">
-          <img
-            className="logo_img "
-            alt={props.navbarLogo.logoImg.data.attributes.alternativeText}
-            src={navbarLogoUrl}
-            onClick={() => handleButtonScrollTo(props.navbarLogo.dataScrollTo)}
-          />
+          <a href={`/#${props.navbarLogo.dataScrollTo}`}>
+            <img
+              className="logo_img "
+              alt={props.navbarLogo.logoImg.data.attributes.alternativeText}
+              src={navbarLogoUrl}
+            />
+          </a>
           <ul className="nav_item_list">
             {props.links &&
               props.links.map((link: NavbarLink) => {
-                console.log(link);
                 return (
                   <li key={link.id}>
                     <a
-                      href={`#${
+                      href={
                         link.dataScrollTo === "heroContentContainer"
-                          ? ""
-                          : link.dataScrollTo
-                      }`}
+                          ? "/"
+                          : "/#" + link.dataScrollTo
+                      }
                       className={`nav_item ${
                         link.id === activeTab ? "nav_item_active" : ""
                       }`}
@@ -113,9 +105,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             <GlitterButton
               buttonText={props.navButton.text}
               iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-              onClick={() => handleButtonScrollTo(props.navButton.dataScrollTo)}
               style={{ width: 250 }}
-              type="button"
+              type="link"
+              href={`/#${props.navButton.dataScrollTo}`}
             />
           </div>
           <div className="nav_btn_mobile">

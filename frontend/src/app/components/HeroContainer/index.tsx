@@ -73,10 +73,8 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
                 <GlitterButton
                   buttonText={data.heroButton.name}
                   iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
-                  onClick={() =>
-                    handleButtonScrollTo(data.heroButton.dataScrollTo)
-                  }
-                  type="button"
+                  type="link"
+                  href={`/#${data.heroButton.dataScrollTo}`}
                 />
               </div>
               <BottemScrollButton onClick={() => {}} />

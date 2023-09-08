@@ -15,7 +15,6 @@ interface TeamContainerProps {
 }
 
 const TeamContainer: React.FC<{ data: TeamContainerProps }> = ({ data }) => {
-  console.log('data', data);
   
   const fluidmark1: any = getStrapiMedia(
     data.fluidmarks.data[0].attributes.url

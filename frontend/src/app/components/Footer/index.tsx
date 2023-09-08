@@ -62,7 +62,16 @@ const Footer: React.FC<FooterProps> = (props) => {
                   className="footer_navBar_link"
                   onClick={() => handleDataScrollTo(link.dataScrollTo)}
                 >
-                  {link.text}
+                  <a
+                    href={
+                      link.dataScrollTo === "heroContentContainer"
+                        ? "/"
+                        : "/#" + link.dataScrollTo
+                    }
+                    className="footer_navBar_link"
+                  >
+                    {link.text}
+                  </a>
                 </div>
               ))}
           </div>
@@ -77,8 +86,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           </div>
         </div>
 
-
-        <hr className="hr-line"/>
+        <hr className="hr-line" />
 
         <div className="footer_bottom">
           <div className="normal_txt">
@@ -87,11 +95,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           <div className="footer_bottom_link">
             {props.policyLinks &&
               props.policyLinks.map((policyLink: PolicyLink, index: number) => (
-                <a
-                  key={index}
-                  href={policyLink.url}
-                  className=""
-                >
+                <a key={index} href={policyLink.url} className="">
                   {policyLink.text}
                 </a>
               ))}
