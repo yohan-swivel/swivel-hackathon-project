@@ -29,7 +29,8 @@ const Feild: React.FC<{
   phoneInput: string;
 }> = (props) => {
   const [countyCode, setCountryCode] = useState<string>("");
-  const [validatePhoneNumber, setValidatePhoneNumber] = useState<string>("");
+  const [validatePhoneNumber, setValidatePhoneNumber] =
+    useState<boolean>(false);
   const [phoneNumberOnFocus, setPhoneNumberOnFocus] = useState<boolean>(false);
 
   useEffect(() => {
@@ -100,8 +101,23 @@ const Feild: React.FC<{
               color: "rgba(255, 255, 255, 0.5)",
             }}
             inputProps={{
+              id: props.feild.feildName,
               name: props.feild.feildName,
               required: props.feild.required,
+              pattern: ".{6,}",
+              onInvalid: () => {
+                const feildInput: any = document.getElementById(
+                  props.feild.feildName
+                );
+                feildInput.setCustomValidity("Please fill out this feild.");
+              },
+              onInput: () => {
+                const feildInput: any = document.getElementById(
+                  props.feild.feildName
+                );
+                feildInput.setCustomValidity("");
+              },
+              autoFocus: true,
             }}
             country={countyCode.toLowerCase()}
             onChange={(
@@ -111,28 +127,10 @@ const Feild: React.FC<{
               formattedValue: string
             ) => {
               props.setPhoneInput(formattedValue);
-              const valueWithoutNumber = value.slice(data.dialCode.length);
-              setValidatePhoneNumber(valueWithoutNumber);
+              // const valueWithoutNumber = value.slice(data.dialCode.length);
+              // setValidatePhoneNumber(valueWithoutNumber);
             }}
             value={props.phoneInput}
-            isValid={(value, country) => {
-              if (phoneNumberOnFocus) {
-                if (validatePhoneNumber === "") {
-                  return "Please enter phone number";
-                } else {
-                  const phoneValidate = new RegExp(
-                    /^(\d{3})[- ]?(\d{3})[- ]?(\d{5})$/
-                  ).test(value);
-                  if (phoneValidate) {
-                    return true;
-                  } else {
-                    return "Phone number should be in ISO format";
-                  }
-                }
-              } else {
-                return true;
-              }
-            }}
           />
         );
     }

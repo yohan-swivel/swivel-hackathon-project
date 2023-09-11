@@ -16,12 +16,13 @@ module.exports = {
   },
 };
 
-const sendFeedbackEmail = async (fromEmail, subject, text) => {
+const sendFeedbackEmail = async (replyTo, subject, text) => {
   return await strapi.plugins["email"].services.email.send({
-    to: process.env.EMAIL_TO_FROM,
-    from: fromEmail,
+    to: process.env.EMAIL_TO,
+    from: process.env.EMAIL_FROM,
+    replyTo: replyTo,
     subject: subject,
-    html: text,
+    html: `Inquiry was sent by ${replyTo} ${text}`,
   });
 };
 
