@@ -4,12 +4,12 @@ import LottieLoader from "react-lottie-loader";
 
 const LoadingAnimation: React.FC = () => {
   return (
-    <div className="flex h-screen">
+    <div className="load_center">
       <LottieLoader
         animationData={loadingAnimation}
         style={{
-          width: 300,
-          height: 300,
+          width: 200,
+          height: 200,
         }}
         className="m-auto"
       />

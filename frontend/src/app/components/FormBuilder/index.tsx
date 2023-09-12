@@ -117,7 +117,6 @@ const Feild: React.FC<{
                 );
                 feildInput.setCustomValidity("");
               },
-              autoFocus: true,
             }}
             country={countyCode.toLowerCase()}
             onChange={(
