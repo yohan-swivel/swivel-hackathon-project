@@ -31,7 +31,12 @@ const sendResponseEmail = async (toEmail) => {
     to: toEmail,
     from: process.env.EMAIL_TO_FROM,
     subject: "Hackathon Inquiry",
-    html: `Thank you for reaching out to us with your inquiry about our hackathon event. We appreciate your interest and enthusiasm!
-    We're excited to hear that you're interested in participating in our hackathon. Our team is dedicated to fostering a vibrant and innovative community of hackers, and we're here to assist you in any way we can.`,
+    html: `
+    Hi there,
+
+    Thank you for reaching out to us through our SwivelHack website. We appreciate your interest and are looking forward on how we can serve you best! 
+    Someone from our team will be in touch with you shortly. In the meantime please check out our social media pages to stay up-to-date on our work.
+    
+  `,
   });
 };
