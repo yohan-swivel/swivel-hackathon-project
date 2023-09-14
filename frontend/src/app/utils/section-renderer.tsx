@@ -24,7 +24,7 @@ export function sectionRenderer(section: any, index: number) {
     case "sections.theme-stack":
       return <ThemeContainer key={index} data={section} />;
     case "sections.event-highlights-container":
-      return <EventHighlightsContainer key={index} data={section} />;
+      return <EventHighlightsContainer key={index} data={section} isPage={false} />;
     case "sections.winners-container":
       return <WinnersContainer key={index} data={section} />;
     case "sections.home-sponsers":
