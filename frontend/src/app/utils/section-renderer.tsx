@@ -10,8 +10,6 @@ import EventHighlightsContainer from "../components/EventHighlightsContainer";
 import WinnersContainer from "../components/WinnersContainer";
 
 export function sectionRenderer(section: any, index: number) {
-  // console.log(section);
-
   switch (section.__component) {
     case "sections.hero-container":
       return <HeroContainer key={index} data={section} />;

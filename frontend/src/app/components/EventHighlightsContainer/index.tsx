@@ -8,6 +8,9 @@ import VideoItem from "./VideoItem";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import GlitterButton from "../GlitterButton";
+import ReactPlayer from "react-player";
+import { AiOutlineClose } from "react-icons/ai";
+import { IconContext } from "react-icons";
 
 const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
   data,
@@ -30,7 +33,6 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
 
   const openVideoModal = (index: number) => {
     setOpen(true);
-    console.log(index);
     setSelectedVideo(index);
   };
   const closeVideoModal = () => setOpen(false);
@@ -75,7 +77,7 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
           <GlitterButton
             buttonText="See More"
             style={{
-              width: "20%",
+              width: 144,
               margin: "auto",
               marginTop: "50px",
             }}
@@ -111,16 +113,35 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
           onMoveNextRequest={() =>
             setLightboxImageIndex((lightboxImageIndex + 1) % mediaLength)
           }
+          animationDisabled
         />
       )}
-      <Modal open={open} onClose={closeVideoModal} center>
-        <iframe
-          className="iframeBox"
-          src={data.videoItems[selectedVideo].url}
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          style={{ border: "none" }}
-        ></iframe>
+      <Modal
+        open={open}
+        onClose={closeVideoModal}
+        center
+        styles={{
+          modal: {
+            overflowX: "hidden",
+            overflowY: "hidden",
+            width: "50%",
+            height: "60%",
+          },
+        }}
+        closeIcon={
+          <IconContext.Provider value={{ color: "white", size: "25px" }}>
+            <AiOutlineClose />
+          </IconContext.Provider>
+        }
+      >
+        <ReactPlayer
+          url={data.videoItems[selectedVideo].url}
+          controls
+          style={{
+            margin: "auto",
+            paddingTop: 30,
+          }}
+        />
       </Modal>
     </div>
   );

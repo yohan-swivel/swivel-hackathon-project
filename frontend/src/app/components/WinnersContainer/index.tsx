@@ -4,8 +4,6 @@ import "react-image-lightbox/style.css";
 import WinnerItem from "./WinnerItem";
 
 const WinnersContainer: React.FC<{ data: any }> = ({ data }) => {
-  console.log(data.winnerItems);
-
   return (
     <div className="container_inner">
       <section className="section" id={data?.dataScrollTo}>
