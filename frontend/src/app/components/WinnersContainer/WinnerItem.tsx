@@ -7,7 +7,7 @@ const WinnerItem = (props: any) => {
   );
   return (
     <>
-      <div className="gallery_box">
+      <div className="winner_box">
         <img
           alt={props?.winnerImage?.data?.attributes?.alternativeText}
           src={thumbImageUrl}

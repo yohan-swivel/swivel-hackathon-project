@@ -436,6 +436,21 @@ html {
   cursor: pointer;
 }
 
+.winner_box {
+  display: flex;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.winner_box > img {
+  width: 100%;
+  object-fit: fill;
+  height: 200px;
+  cursor: pointer;
+}
+
 .video_box {
   display: flex;
   padding: 1rem;
