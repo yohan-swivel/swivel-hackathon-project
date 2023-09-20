@@ -7,7 +7,7 @@ const DateCard: React.FC<{ date: string }> = (props) => {
           alt=""
           src="/icoutlinedaterange.svg"
         />
-        <div className="sm_txt">When:</div>
+        <div className="sm_txt">Held</div>
       </div>
       <div className="line"/>
       <div className="normal_txt">{props.date}</div>
