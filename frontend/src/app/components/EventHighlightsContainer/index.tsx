@@ -73,7 +73,7 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
                 />
               ))}
         </div>
-        {!isPage && (
+        {data.enableSeeMore ? (
           <GlitterButton
             buttonText="See More"
             style={{
@@ -85,6 +85,8 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
             type="link"
             href="/event-highlights"
           />
+        ) : (
+          <></>
         )}
       </section>
       {lightboxIsOpen && (
