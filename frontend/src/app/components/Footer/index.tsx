@@ -89,7 +89,7 @@ const Footer: React.FC<FooterProps> = (props) => {
         <hr className="hr-line" />
 
         <div className="footer_bottom">
-          <div className="normal_txt">
+          <div className="footer_copyright_text">
             © {new Date().getFullYear()} {props.copyrights}
           </div>
           <div className="footer_bottom_link">

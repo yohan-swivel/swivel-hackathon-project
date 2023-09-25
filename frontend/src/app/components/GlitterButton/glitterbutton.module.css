@@ -8,6 +8,7 @@
   border-image: linear-gradient(to right, #89298d, #1f5da1);
   border-image-slice: 1;
   transition: border-image 0.3s;
+  font-family: 'Montserrat' !important;
 }
 
 .gradientButton:hover {

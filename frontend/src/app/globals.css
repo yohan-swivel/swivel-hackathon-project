@@ -317,6 +317,16 @@ html {
   line-height: 1.5;
 }
 
+.footer_copyright_text {
+  color: #fff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
 .section {
   padding-top: 110px;
 }
@@ -373,6 +383,7 @@ html {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
+  text-align: left;
 }
 
 .teams_board {
@@ -446,8 +457,8 @@ html {
 
 .winner_box > img {
   width: 100%;
-  object-fit: fill;
-  height: 200px;
+  /* object-fit: fill; */
+  /* height: 200px; */
   cursor: pointer;
 }
 
@@ -976,7 +987,7 @@ textarea {
   align-items: center;
 }
 
-.iframeBox{
+.iframeBox {
   width: 750px;
   height: 500px;
 }

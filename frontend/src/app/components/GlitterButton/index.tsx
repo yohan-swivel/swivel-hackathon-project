@@ -19,7 +19,12 @@ const GlitterButton: React.FC<GlitterButtonProps> = (props) => {
           <button
             className="gradientButton"
             onClick={props.onClick}
-            style={props.style}
+            style={{
+              fontFamily: "Montserrat",
+              fontSize: 15,
+              fontWeight: "bold",
+              ...props.style,
+            }}
             type="button"
           >
             <b>{props.buttonText}</b>

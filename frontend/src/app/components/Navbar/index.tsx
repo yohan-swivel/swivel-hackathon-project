@@ -85,11 +85,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 return (
                   <li key={link.id}>
                     <a
-                      href={
-                        link.dataScrollTo === "heroContentContainer"
-                          ? "/"
-                          : "/#" + link.dataScrollTo
-                      }
+                      href={`/#${link.dataScrollTo}`}
                       className={`nav_item ${
                         link.id === activeTab ? "nav_item_active" : ""
                       }`}
@@ -125,17 +121,21 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 {props.links &&
                   props.links.map((link: NavbarLink) => {
                     return (
-                      <li
+                      <a
                         key={link.id}
-                        className={`nav_item_m ${
-                          link.id === activeTab ? "nav_item_active_m" : ""
-                        }`}
-                        onClick={() =>
-                          handleDataScrollTo(link.dataScrollTo, link.id)
-                        }
+                        href={`/#${link.dataScrollTo}`}
+                        onClick={() => setIsOpen(false)}
+                        style={{textDecoration:'none'}}
                       >
-                        <p>{link.text}</p>
-                      </li>
+                        <li
+                          key={link.id}
+                          className={`nav_item_m ${
+                            link.id === activeTab ? "nav_item_active_m" : ""
+                          }`}
+                        >
+                          <p>{link.text}</p>
+                        </li>
+                      </a>
                     );
                   })}
               </ul>
