@@ -49,7 +49,7 @@ export interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = (props) => {
-  const [activeTab, setActiveTab] = useState<number>(16);
+  const [activeTab, setActiveTab] = useState<number>(props.links[0].id);
   const [isOpen, setIsOpen] = useState(false);
 
   const navbarLogoUrl: any = getStrapiMedia(
