@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_event_highlights_containers",
+  "info": {
+    "displayName": "EventHighlightsContainer",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "galleryItems": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "videoItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.video-embed"
+    },
+    "enableSeeMore": {
+      "type": "boolean"
+    }
+  }
+}

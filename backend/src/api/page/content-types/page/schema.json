@@ -48,7 +48,9 @@
         "sections.glance-container",
         "sections.contact-us-container",
         "elements.contact-us-card",
-        "sections.content-section"
+        "sections.content-section",
+        "sections.winners-container",
+        "sections.event-highlights-container"
       ]
     },
     "slug": {

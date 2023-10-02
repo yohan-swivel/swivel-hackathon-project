@@ -1,16 +1,17 @@
 {
-  "collectionName": "components_sections_video_embeds",
+  "collectionName": "components_elements_winner_items",
   "info": {
-    "displayName": "Video Embed",
-    "description": ""
+    "displayName": "WinnerItem"
   },
   "options": {},
   "attributes": {
-    "url": {
-      "type": "string",
-      "required": true
+    "headerText": {
+      "type": "string"
     },
-    "thumbnail": {
+    "headerDescription": {
+      "type": "text"
+    },
+    "winnerImage": {
       "allowedTypes": [
         "images",
         "files",

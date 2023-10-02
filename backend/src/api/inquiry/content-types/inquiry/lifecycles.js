@@ -3,14 +3,14 @@ module.exports = {
     const { result } = event;
     try {
 
-      await sendResponseEmail(result.email);
-      const sentStatus = await sendFeedbackEmail(
-        result.name,
-        result.email,
-        result.phone,
-        result.subject,
-        result.message
-      );
+      // await sendResponseEmail(result.email);
+      // const sentStatus = await sendFeedbackEmail(
+      //   result.name,
+      //   result.email,
+      //   result.phone,
+      //   result.subject,
+      //   result.message
+      // );
 
     } catch (err) {
       console.log(err);

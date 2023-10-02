@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_sections_winners_containers",
+  "info": {
+    "displayName": "WinnersContainer"
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "winnerItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.winner-item"
+    }
+  }
+}
