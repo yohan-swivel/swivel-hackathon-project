@@ -75,6 +75,7 @@ const HeroContainer: React.FC<{ data: HeroContainerProps }> = ({ data }) => {
                   iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
                   type="link"
                   href={`/#${data.heroButton.dataScrollTo}`}
+                  fontSize={15}
                 />
               </div>
               <BottemScrollButton onClick={() => {}} />

@@ -84,6 +84,7 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
             iconUrl="/materialsymbolsarrowrightaltrounded1.svg"
             type="link"
             href="/event-highlights"
+            fontSize={14}
           />
         ) : (
           <></>

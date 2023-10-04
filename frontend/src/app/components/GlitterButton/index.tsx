@@ -9,6 +9,7 @@ interface GlitterButtonProps {
   style?: CSSProperties;
   className?: string;
   href?: string;
+  fontSize:number
 }
 
 const GlitterButton: React.FC<GlitterButtonProps> = (props) => {
@@ -21,7 +22,7 @@ const GlitterButton: React.FC<GlitterButtonProps> = (props) => {
             onClick={props.onClick}
             style={{
               fontFamily: "Montserrat",
-              fontSize: 15,
+              fontSize: props.fontSize,
               fontWeight: "bold",
               ...props.style,
             }}

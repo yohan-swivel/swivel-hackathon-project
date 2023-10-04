@@ -104,6 +104,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               style={{ width: 250 }}
               type="link"
               href={`/#${props.navButton.dataScrollTo}`}
+              fontSize={15}
             />
           </div>
           <div className="nav_btn_mobile">

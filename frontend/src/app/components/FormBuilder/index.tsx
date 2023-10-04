@@ -222,6 +222,7 @@ const FormBuilder: React.FC<FormBuilderProps> = (props) => {
                 width: "50%",
                 margin: "auto",
               }}
+              fontSize={15}
             />
           </div>
         </form>

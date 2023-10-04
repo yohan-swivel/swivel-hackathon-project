@@ -2,14 +2,13 @@ module.exports = {
   async afterCreate(event) {
     const { result } = event;
     try {
-
       await sendResponseEmail(result.email);
       const sentStatus = await sendFeedbackEmail(
         result.name,
         result.email,
         result.phone,
         result.subject,
-        result.message
+        result.message.replace(/\n/g, "<br>")
       );
 
     } catch (err) {
@@ -58,13 +57,14 @@ th, td {
   </tr>
   <tr>
     <th>Message:</th>
-    <td>${text}</td>
+    <td><p>${text}</p></td>
   </tr>
 </table>
 
-  <p>
-  This is an auto generated email. <b><u>Please do not reply to the message.</u></b> For enquiries, contact out committee at <a href="mailto:hackathoncommittee@swivelgroup.com.au">hackathoncommittee@swivelgroup.com.au</a>
-  </p>  
+<p>
+This is an auto generated email. <b><u>Please do not reply to the message.</u></b> For enquiries, contact out committee at <a href="mailto:hackathoncommittee@swivelgroup.com.au">hackathoncommittee@swivelgroup.com.au</a>
+</p> 
+  
   `
   });
 };
