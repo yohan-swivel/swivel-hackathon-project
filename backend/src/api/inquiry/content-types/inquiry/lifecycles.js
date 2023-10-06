@@ -62,7 +62,7 @@ th, td {
 </table>
 
 <p>
-This is an auto generated email. <b><u>Please do not reply to the message.</u></b> For enquiries, contact out committee at <a href="mailto:hackathoncommittee@swivelgroup.com.au">hackathoncommittee@swivelgroup.com.au</a>
+This is an auto generated email. <b><u>Please do not reply to the message.</u></b> For inquiries, contact out committee at <a href="mailto:hackathoncommittee@swivelgroup.com.au">hackathoncommittee@swivelgroup.com.au</a>
 </p> 
   
   `
