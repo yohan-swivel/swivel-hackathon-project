@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderText from "../HeaderText";
 import GalleryItem from "./GalleryItem";
 import "react-image-lightbox/style.css";
@@ -21,6 +21,38 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
   const [selectedVideo, setSelectedVideo] = useState(0) as any;
   const [open, setOpen] = useState(false);
   const mediaLength = isPage ? data?.galleryItems.data.length : 6;
+  const size = useWindowSize();
+
+  function useWindowSize() {
+    // Initialize state with undefined width/height so server and client renders match
+    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+    const [windowSize, setWindowSize] = useState<{ width: any, height: any }>({
+      width: undefined,
+      height: undefined,
+    });
+
+    useEffect(() => {
+      // only execute all the code below in client side
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+    return windowSize;
+  }
 
   const openLightbox = (index: number) => {
     setLightboxIsOpen(true);
@@ -36,6 +68,7 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
     setSelectedVideo(index);
   };
   const closeVideoModal = () => setOpen(false);
+
 
   return (
     <div className="container_inner">
@@ -124,12 +157,15 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
         onClose={closeVideoModal}
         center
         styles={{
-          modal: {
+          modal: size.width > 1000 ? {
             overflowX: "hidden",
             overflowY: "hidden",
-            width: "50%",
+            width: "55%",
             height: "60%",
-          },
+          } : {},
+          closeButton: {
+            right: '-1px'
+          }
         }}
         closeIcon={
           <IconContext.Provider value={{ color: "white", size: "25px" }}>
@@ -142,8 +178,11 @@ const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
           controls
           style={{
             margin: "auto",
-            paddingTop: 30,
+            paddingTop: 43,
           }}
+          width={'100%'}
+          height={'100%'}
+
         />
       </Modal>
     </div>
