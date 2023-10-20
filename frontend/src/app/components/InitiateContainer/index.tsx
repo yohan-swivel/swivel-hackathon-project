@@ -4,14 +4,48 @@ import VenueCard from "../VenueCard";
 import DateCard from "../DateCard";
 import React from "react";
 import _ from "lodash";
+import { Logo } from "../Navbar";
+import { getStrapiMedia } from "@/app/utils/api-helpers";
 
+interface InitiateItemType {
+  id: number,
+  headerText: string,
+  description: string,
+  category: 'COUNTDOWN' | 'DESCRIPTION',
+  countDowntime: string,
+  countdownCompletedMessage: string,
+  componentEnableState: boolean,
+  componentIcon: Logo
+}
 interface InitiateContainerProps {
   id: number;
   __component: string;
-  countdownDateTime: string;
-  venue: string;
-  commencement: string;
-  countdownCompletedMessage: string;
+  initiateItems: Array<InitiateItemType>
+}
+
+const InitiateItem: React.FC<InitiateItemType> = (props) => {
+  const icon = getStrapiMedia(
+    props.componentIcon.data.attributes.url
+  );
+  if (props.componentEnableState) {
+    switch (props.category) {
+      case 'COUNTDOWN':
+        return <CountDownCard
+          completedText={props.countdownCompletedMessage}
+          countDownTime={props.countDowntime}
+          label={props.headerText}
+          icon={icon}
+        />
+      case 'DESCRIPTION':
+        return <DateCard date={props.description} icon={icon} label={props.headerText} />
+      case 'DESCRIPTION':
+        return <VenueCard venue={props.description} icon={icon} label={props.headerText} />
+      default:
+        return null
+    }
+  } else {
+    return <></>
+  }
 }
 
 const InitiateContainer: React.FC<{ data: InitiateContainerProps }> = ({
@@ -19,8 +53,9 @@ const InitiateContainer: React.FC<{ data: InitiateContainerProps }> = ({
 }) => {
   return (
     <div className="container_inner init_row">
-      {_.isNull(data.countdownDateTime) ||
-      _.isUndefined(data.countdownDateTime) ? (
+      {data.initiateItems && data.initiateItems.map((initiateItem: InitiateItemType) => <InitiateItem {...initiateItem} />)}
+      {/* {_.isNull(data.countdownDateTime) ||
+        _.isUndefined(data.countdownDateTime) ? (
         <></>
       ) : (
         <CountDownCard
@@ -29,7 +64,7 @@ const InitiateContainer: React.FC<{ data: InitiateContainerProps }> = ({
         />
       )}
       <DateCard date={data.commencement} />
-      <VenueCard venue={data.venue} />
+      <VenueCard venue={data.venue} /> */}
     </div>
   );
 };

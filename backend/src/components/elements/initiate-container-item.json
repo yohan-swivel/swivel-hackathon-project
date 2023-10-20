@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_elements_initiate_container_items",
+  "info": {
+    "displayName": "InitiateContainerItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headerText": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "COUNTDOWN",
+        "DESCRIPTION"
+      ]
+    },
+    "countDowntime": {
+      "type": "datetime"
+    },
+    "countdownCompletedMessage": {
+      "type": "string"
+    },
+    "componentEnableState": {
+      "type": "boolean"
+    },
+    "componentIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

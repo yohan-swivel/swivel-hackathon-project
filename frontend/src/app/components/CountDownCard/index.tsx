@@ -5,6 +5,8 @@ import Countdown from "react-countdown";
 interface CountDownProps {
   countDownTime: string | number | Date;
   completedText: string;
+  label: string
+  icon: any
 }
 
 const CountDownCard: React.FC<CountDownProps> = (props) => {
@@ -34,8 +36,8 @@ const CountDownCard: React.FC<CountDownProps> = (props) => {
   return (
     <div className="box_style">
       <div className="row">
-        <img alt="countdown" src="/ritimeline.svg" />
-        {timerCompleted ? <></> : <p className="sm_txt">Countdown:</p>}
+        <img alt="countdown" src={props.icon} />
+        {timerCompleted ? <></> : <p className="sm_txt">{props.label}</p>}
       </div>
       <div className="line" />
       <div className="normal_txt">

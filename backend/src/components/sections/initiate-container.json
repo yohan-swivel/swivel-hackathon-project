@@ -6,17 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "countdownDateTime": {
-      "type": "datetime"
-    },
-    "venue": {
-      "type": "string"
-    },
-    "commencement": {
-      "type": "string"
-    },
-    "countdownCompletedMessage": {
-      "type": "string"
+    "initiateItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.initiate-container-item"
     }
   }
 }
