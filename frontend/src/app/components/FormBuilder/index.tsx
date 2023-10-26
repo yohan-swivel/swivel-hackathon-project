@@ -89,7 +89,7 @@ const Feild: React.FC<{
               height: 50,
               backgroundColor: "#191919",
               border: "none",
-              color: "rgba(255, 255, 255, 0.5)",
+              // color: "rgba(255, 255, 255, 0.5)",
               marginLeft: 35 + "px !important",
             }}
             buttonStyle={{

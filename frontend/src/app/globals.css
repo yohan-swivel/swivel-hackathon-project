@@ -459,7 +459,7 @@ html {
   width: 100%;
   /* object-fit: fill; */
   /* height: 200px; */
-  cursor: pointer;
+  cursor: default;
 }
 
 .video_box {
@@ -694,6 +694,8 @@ textarea {
   font-weight: 700;
   line-height: normal;
 }
+
+
 
 .form_grid {
   margin-top: 2rem;
