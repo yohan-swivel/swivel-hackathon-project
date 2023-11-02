@@ -3,7 +3,7 @@ import "react-phone-input-2/lib/style.css";
 import PhoneInput, { CountryData } from "react-phone-input-2";
 import React, { useEffect, useRef, useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { getStrapiURL } from "@/app/utils/api-helpers";
+import { getStrapiURL } from "@/utils/api-helpers";
 
 interface FeildType {
   id?: number;

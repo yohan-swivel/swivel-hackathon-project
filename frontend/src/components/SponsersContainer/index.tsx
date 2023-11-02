@@ -1,5 +1,5 @@
 "use client";
-import { getStrapiMedia } from "@/app/utils/api-helpers";
+import { getStrapiMedia } from "@/utils/api-helpers";
 import { Logo } from "../Navbar";
 import HeaderText from "../HeaderText";
 
