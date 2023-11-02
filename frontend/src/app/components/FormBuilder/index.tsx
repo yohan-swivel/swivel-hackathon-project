@@ -39,7 +39,7 @@ const Feild: React.FC<{
       .then((response) => {
         setCountryCode(response.country_code);
       })
-      .catch((data) => {});
+      .catch((data) => { });
   }, []);
 
   const renderFeildForType = (feild: FeildType) => {
@@ -85,12 +85,10 @@ const Feild: React.FC<{
           <PhoneInput
             placeholder={props.feild.placeholder}
             inputStyle={{
-              width: "95%",
+              width: "100%",
               height: 50,
               backgroundColor: "#191919",
               border: "none",
-              // color: "rgba(255, 255, 255, 0.5)",
-              marginLeft: 35 + "px !important",
             }}
             buttonStyle={{
               backgroundColor: "#191919",

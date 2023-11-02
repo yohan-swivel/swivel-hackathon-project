@@ -14,7 +14,7 @@ import { IconContext } from "react-icons";
 
 const EventHighlightsContainer: React.FC<{ data: any; isPage: boolean }> = ({
   data,
-  isPage = false,
+  isPage,
 }) => {
   const [lightboxIsOpen, setLightboxIsOpen] = useState(false);
   const [lightboxImageIndex, setLightboxImageIndex] = useState(0) as any;
