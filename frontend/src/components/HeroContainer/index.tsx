@@ -1,5 +1,5 @@
 "use client";
-import { getStrapiMedia } from "@/app/utils/api-helpers";
+import { getStrapiMedia } from "@/utils/api-helpers";
 import BottemScrollButton from "../BottemScrollButton";
 import GlitterButton from "../GlitterButton";
 import { Logo, LogoItem, NavbarLink } from "../Navbar";

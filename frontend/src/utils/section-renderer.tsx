@@ -1,5 +1,5 @@
-import HeroContainer from "@/app/components/HeroContainer";
-import InitiateContainer from "@/app/components/InitiateContainer";
+import HeroContainer from "@/components/HeroContainer";
+import InitiateContainer from "@/components/InitiateContainer";
 import GlanceContainer from "../components/GlanceContainer";
 import TeamContainer from "../components/TeamContainer";
 import ThemeContainer from "../components/ThemeContainer";

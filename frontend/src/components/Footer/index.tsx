@@ -1,13 +1,13 @@
 "use client";
 
-import { getStrapiMedia } from "@/app/utils/api-helpers";
+import { getStrapiMedia } from "@/utils/api-helpers";
 import { Logo, NavbarLink } from "../Navbar";
 import { useCallback } from "react";
 import styles from "./footer.module.css";
 import {
   RenderSocialIcon,
   SocialType,
-} from "@/app/utils/social-media-icon-renderer";
+} from "@/utils/social-media-icon-renderer";
 
 interface SoicalLink {
   id: number;

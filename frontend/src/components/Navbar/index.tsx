@@ -1,5 +1,5 @@
 "use client";
-import { getStrapiMedia } from "@/app/utils/api-helpers";
+import { getStrapiMedia } from "@/utils/api-helpers";
 import GlitterButton from "../GlitterButton";
 import { useCallback, useState } from "react";
 import { FaBars } from "react-icons/fa6";

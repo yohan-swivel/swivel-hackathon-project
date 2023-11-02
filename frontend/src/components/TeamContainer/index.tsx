@@ -1,5 +1,5 @@
 "use client";
-import { getStrapiMedia } from "@/app/utils/api-helpers";
+import { getStrapiMedia } from "@/utils/api-helpers";
 import HeaderText from "../HeaderText";
 import { LogoItem } from "../Navbar";
 import TeamGrid, { TeamsGridProps } from "../TeamGrid";

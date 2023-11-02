@@ -1,5 +1,5 @@
-import EventHighlightsContainer from "../components/EventHighlightsContainer";
-import { getPageBySlug } from "../utils/get-page-by-slug";
+import EventHighlightsContainer from "@/components/EventHighlightsContainer";
+import { getPageBySlug } from "@/utils/get-page-by-slug";
 
 export default async function PageRoute() {
   const pageID: string = process.env.NEXT_EVENT_HIGH_LIGHT_ID || "17";

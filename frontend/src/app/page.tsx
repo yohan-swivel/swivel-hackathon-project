@@ -1,5 +1,5 @@
-import { getPageBySlug } from "./utils/get-page-by-slug";
-import { sectionRenderer } from "./utils/section-renderer";
+import { getPageBySlug } from "@/utils/get-page-by-slug";
+import { sectionRenderer } from "@/utils/section-renderer";
 
 export default async function RootRoute() {
   const mainPageId: string = process.env.NEXT_MAIN_PAGE_ID || "3";
