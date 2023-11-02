@@ -1,5 +1,5 @@
 import { getPageBySlug } from "../utils/get-page-by-slug";
-import parse from "html-react-parser";
+// import parse from "html-react-parser";
 
 interface RenderMainSectionParams {
   contentName: string;
@@ -16,14 +16,14 @@ const renderMainSection = (params: RenderMainSectionParams[]) => {
           return (
             <div className="section_block">
               <h1>{params.headerText}</h1>
-              {parse(params.headerDescription)}
+              {/* {parse(params.headerDescription)} */}
             </div>
           );
         case "main.content.two":
           return (
             <div className="section_block">
               <h2>{params.headerText}</h2>
-              {parse(params.headerDescription)}
+              {/* {parse(params.headerDescription)} */}
             </div>
           );
         default:
@@ -49,7 +49,7 @@ const renderSubSection = (params: RenderMainSectionParams[]) => {
         return (
           <div className="section_block">
             <h2>{params.headerText}</h2>
-            {parse(params.headerDescription)}
+            {/* {parse(params.headerDescription)} */}
           </div>
         );
       }

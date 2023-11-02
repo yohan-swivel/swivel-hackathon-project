@@ -1,6 +1,6 @@
 import { getStrapiMedia } from "@/app/utils/api-helpers";
 import { Logo } from "../Navbar";
-import parse from "html-react-parser";
+// import parse from "html-react-parser";
 
 export interface ThemeItemProps {
   id: number;
@@ -17,7 +17,7 @@ const ThemeItem: React.FC<ThemeItemProps> = (props) => {
         alt={props.themeIcon.data.attributes.alternativeText}
         src={themeIconUrl}
       />
-      <h5>{parse(props.themeTitle)}</h5>
+      {/* <h5>{parse(props.themeTitle)}</h5> */}
       <p>{props.themeDescription}</p>
     </div>
   );

@@ -1,4 +1,4 @@
-import parse from "html-react-parser";
+// import parse from "html-react-parser";
 interface AddressType {
   id: number;
   country: string;
@@ -68,7 +68,7 @@ const ContactUsCard: React.FC<ContactUsCardProps> = (props) => {
               props.addresses.map((address: AddressType, index: number) => (
                 <div key={index} className="location">
                   <h5>{address.country}</h5>
-                  <p>{parse(address?.address)}</p>
+                  {/* <p>{parse(address?.address)}</p> */}
                 </div>
               ))}
           </div>
