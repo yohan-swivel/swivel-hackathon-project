@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./responsive.css";
-import { getStrapiURL } from "./utils/api-helpers";
-import { fetchAPI } from "./utils/fetch-api";
-import { FALLBACK_SEO } from "./utils/constants";
-import Navbar, { NavbarProps } from "./components/Navbar";
-import Footer from "./components/Footer";
-import { FooterProps } from "./components/Footer";
+import { getStrapiURL } from "@/utils/api-helpers";
+import { fetchAPI } from "@/utils/fetch-api";
+import { FALLBACK_SEO } from "@/utils/constants";
+import Navbar, { NavbarProps } from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { FooterProps } from "@/components/Footer";
 import { Suspense } from "react";
 import Loading from "./loading";
 

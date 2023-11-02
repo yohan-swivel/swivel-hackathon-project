@@ -1,5 +1,5 @@
 import React from "react";
-import { getStrapiMedia } from "@/app/utils/api-helpers";
+import { getStrapiMedia } from "@/utils/api-helpers";
 
 const WinnerItem = (props: any) => {
   const thumbImageUrl: any = getStrapiMedia(

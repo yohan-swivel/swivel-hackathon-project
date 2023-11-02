@@ -1,4 +1,4 @@
-import { getPageBySlug } from "../utils/get-page-by-slug";
+import { getPageBySlug } from "@/utils/get-page-by-slug";
 import parse from "html-react-parser";
 
 interface RenderMainSectionParams {

@@ -1,5 +1,5 @@
 "use client";
-import loadingAnimation from "@/app/utils/loading-animation.json";
+import loadingAnimation from "@/utils/loading-animation.json";
 import LottieLoader from "react-lottie-loader";
 
 const LoadingAnimation: React.FC = () => {
